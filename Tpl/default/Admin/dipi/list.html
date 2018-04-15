@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link rel="stylesheet" type="text/css" href="/Public/css/admin/style.css" />
+	<script type="text/javascript" src="/Public/js/jquery-1.4.4.js"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	<script>
+	 function encodingForm(){
+		 document.getElementById("productName").value = encodeURIComponent(document.getElementById("productName1").value);
+	 }
+	</script>
+</head>
+
+<body>
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+			
+				
+				
+	<script>
+		menusel('p_dipi');
+	</script>
+	
+	
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li class="cbar-tag-sel"><a href="__URL__/index">地皮/厂房/仓库查询</a></li>
+			    			<li><a href="__URL__/add">添加地皮/厂房/仓库</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          <form action="__URL__/index" method="get" name="form1" onsubmit="encodingForm()">
+            <div class="ydbar">
+              <div class="info-title">快速检索</div>
+            </div>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table-f">
+              <tbody>
+              <tr>
+                <td width="10%" align="right" class="formtdl">面积：</td>
+                <td width="40%"><select name="useArea">
+						<option value="0">不限</option>                   
+		                   <foreach name='areaArr' item="area">
+								<option value="{$area}" <if condition="$useArea eq $area">selected=selected</if> >{$key}</option>
+				           </foreach>
+                    </select>
+                </td>
+                <td width="10%" align="right" ></td>
+                <td width="40%">
+                </td>
+               
+              </tr>
+             <!--  <tr>
+                <td width="10%" align="right" class="formtdl">户型：</td>
+                <td colspan="3"><select name="houseType" >
+                			<option value="0">不限</option>
+							<foreach name='houseTypeArr' item="htype">
+								<option value="{$htype}" <if condition="$houseType eq $htype">selected=selected</if> >{$key}</option>
+				           </foreach>
+                    </select>
+                </td>
+               
+               <td width="10%" align="right" class="formtdl">价格：</td>
+                <td width="40%"><select name="totalPrice" id="price">
+						<option value="0">不限</option>
+		                   <foreach name='priceArr' item="price">
+								<option value="{$price}" <if condition="$totalPrice eq $price">selected=selected</if> >{$key}</option>
+				           </foreach>
+		              </select>
+                </td>
+               
+              </tr> -->
+              <tr>
+                <td align="right" class="formtdl">房源名称：</td>
+                <td colspan="3">
+                	<input type="hidden" name="productName" id="productName" size="35" value="{$productName}" />
+                	<input type="text" id="productName1" size="30" value="{$productName}" /> </td>
+               
+               
+              </tr>
+             
+            </tbody></table>
+            <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table-x">
+              <tbody><tr>
+                <td>
+                    <div class="c-col-r btn-add">
+                      <div class="btn-add-l"></div>
+                      <h4><center><input type="submit" value="查询" class="inp-yd"></center></h4>
+                      <div class="btn-add-r"></div>
+                    </div>
+                    </td>
+              </tr>
+            </tbody></table>
+            </form>
+            <div class="ydbar">
+      			<div class="info-title">房源列表</div>
+    		</div>	
+            <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="table_b">
+              <tbody><tr class="tab-top">
+                <td align="center" width="10%"><strong>编号</strong></td>
+                <td align="center" width="15%"><strong>标题</strong></td>
+                <td align="center" width="10%"><strong>区域</strong></td>
+                <td align="center" width="10%"><strong>面积</strong></td>
+                <td align="center" width="15%"><strong>类型</strong></td>
+                <td align="center" width="15%"><strong>方式</strong></td>
+                <td align="center" width="15%"><strong>价格</strong></td>
+                <td align="center" width="10%"><strong>操作</strong></td>
+              </tr>              
+               
+               
+               <volist name="houseList" id="house">
+              <tr onmouseout="this.className=&quot;table-d-c&quot;" onmouseover="this.className=&quot;td-m&quot;" class="table-d-c">
+				<td align="center">{$house.id}</td>
+                <td align="center"><a target="_blank" href="http://zyaxhw.tianyaclub.com">{$house.productName}</a></td>
+                <td align="center">
+                	<foreach name='distList' item="dist">
+                		<eq name="house['districtID']" value="$dist.id" >{$dist.name}</eq>
+                	</foreach>
+                </td>
+                <td align="center">{$house.area|number_format=0}㎡</td>
+                <td align="center">
+                	<foreach name='propertyTypeArr' item="property">
+                		<eq name="house['type']" value="$property" >{$key}</eq>
+                	</foreach>
+                </td> 
+                <td align="center">						     
+                	<foreach name='saleTypeArray' item="saleType">
+                		<eq name="house['saleType']" value="$saleType" >{$key}</eq>
+                	</foreach>
+                </td>
+                
+                <td align="center">{$house.rent|number_format=0,'.', ''}</td>
+                
+                <td align="center"><a href="__URL__/edit?id={$house.id}">编辑</a> |
+                 <a onclick="return confirm( '是否需要删除? ');" href="__URL__/delete?id={$house.id}">删除</a>
+                </td>
+              </tr>
+              </volist>
+             
+			  <tr><td colspan=8 align="center">{$page}</td></tr>
+            </tbody></table>
+            
+             
+             
+  	
+				
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

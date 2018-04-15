@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>【{$com.cityName}商铺,{$com.cityName}{$title}】 - {$com.abbreviation}</title>
+<meta name="keywords" content="{$com.cityName}商铺,{$com.cityName}{$title}">
+<meta name="description" content="{$com.cityName}商铺网,提供大量的{$com.cityName}商铺出租与转让信息,需要购买、出租或转让商铺，请找{$com.abbreviation},联系电话：0757-22183118.">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+	
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	
+		<script>
+			currentMenu("shangpu");
+		</script>
+
+	
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/">{$com.abbreviation}</a> &gt; 
+		<a href="__APP__/shangpu/index">{$com.cityName}商铺租售</a>
+	</div>
+	
+	<div id="index_content">
+	
+		<div id="contentL" class="fl">
+			<!-- <div class="h-box"><a href="#" target="_blank"><img src="__APP__/Public/images/test/44994659_07_112634.jpg" width="700" height="80" /></a></div> -->
+			
+			<div class="typeItem">
+				<if condition="$saleType eq '1'">
+					<span  class="select" ><h1><a href="__APP__/shangpu/index" title="{$com.cityName}商铺出租">出租</a></h1></span> 
+				<else />
+					<span><a href="__APP__/shangpu/index" title="{$com.cityName}商铺出租">出租</a></span> 
+				</if>
+				<if condition="$saleType eq '2'">
+					<span  class="select" ><h1><a href="__APP__/shangpu/index2" title="{$com.cityName}商铺转让">转让</a></h1></span> 
+				<else />
+					<span><a href="__APP__/shangpu/index2" title="{$com.cityName}商铺转让">转让</a></span> 
+				</if>
+			</div>
+			<div class="h-box border0">
+				<!-- <div class="ht"><h1>{$com.cityName}租房</h1></div> -->
+				
+				<foreach name='shangpuList' item="shangpu">
+				<div class="cz-box bgF" >
+					<div class="pic fl">
+						<if condition="$shangpu.picture eq ''">
+							<img src="__APP__{$com.proDefaultPic}" alt="{$shangpu.productName}" width="110" height="90" />
+						<else /> <img src="__APP__{$shangpu.picture}" alt="{$shangpu.productName}" width="110" height="90" /></if>
+					</div>
+					<div class="info info478 fl">
+						<p class="title"><a href="__APP__/shangpu/{$shangpu.id}.html" target="_blank">{$shangpu.productName|msubstr=0,32,'utf-8',false}</a></p>
+						<p class="area">{$shangpu.address|msubstr=0,36,'utf-8',false} </p>
+						<p class="desc">{$shangpu.recommendation|msubstr=0,36,'utf-8',false} </p>
+						<p class="contact">{$shangpu.nickName} {$shangpu.mobile} </p>
+					</div>
+					<div class="price fl">
+						
+							<if condition="$saleType eq '1'">
+								<p><strong>{$shangpu.rent|number_format=0,',',''}</strong><span class="moth">元/月</span></p>
+							</if>
+							<if condition="$saleType eq '2'">
+								<p class="salePrice">售价<br/><strong>{$shangpu.totalPrice|number_format=0,',',''}</strong><span class="moth">万元</span></p>
+							</if>
+						
+					</div> 
+				</div>
+				</foreach>
+				
+				<empty name="shangpuList"><div class="noData"><img src="__APP____PUBLIC__/images/10095S534-23.png" />没有匹配的房源，请修改查询条件</div></empty>
+				<div class="page">{$page}</div>
+			</div>
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

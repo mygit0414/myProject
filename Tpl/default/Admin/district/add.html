@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script src="/Public/js/jquery-1.4.4.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	
+	<script>
+	$(document).ready(function(){
+		$.formValidator.initConfig({formid:"form1",onerror:function(msg){alert(msg)},onsuccess:function(){return true;}});
+		$("#name").formValidator({onShow:"请输入区域名称",onFocus:"请输入区域名称",onCorrect:"输入正确"}).inputValidator({min:1,max:50,onError:"输入错误，请输入1~50个字!"});
+		$("#description").formValidator({empty:true,onShow:"请输入说明,可以不填写",onFocus:"说明可以不填写",onCorrect:"输入正确",defaultvalue:""}).inputValidator({max:100,onError: "说明内容最多100个字!"})
+	});
+	</script>
+</head>
+
+<body>
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+			
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('m_district');
+				</script>
+	
+	
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li><a href="index">已存在的行政区域</a></li>
+			    			<li class="cbar-tag-sel">增加行政区域</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">增加行政区域</div>
+    		</div>	
+       		
+       		<form id="form1" name="form1" method="post" action="insert">
+		         <input type="hidden" name="state" value="1"/>
+		         <input type="hidden" name="level" value="1"/>
+		    <table cellspacing="0" cellpadding="0" border="0" class="table-f">
+		      <tbody>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">区域名称：</td>
+		        <td align="left" colspan="2"><input type="text" id="name" size="50" name="name"></td>
+		        <td align="left" width="35%"><div id="nameTip" class="onShow">请输入区域名称</div></td>
+		      </tr>
+		         
+			  <tr>
+		        <td align="right" width="12%" class="formtdl">说明：</td>
+		        <td align="left" colspan="2"><textarea name="description" id="description" style="width:278px;height:100px;"></textarea></td>
+		        <td align="left" width="35%"><div id="descriptionTip" class="onShow">请输入说明</div></td>
+		      </tr>
+		      
+		      
+		
+		    </tbody></table>
+		    
+    
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		          <td align="center">
+		            <input type="submit" value="提交" id="button" class="inp-yd" name="button">
+		            
+		        </td></tr>
+		    </tbody></table>
+		  </form>
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

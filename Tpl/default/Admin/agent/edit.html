@@ -1,0 +1,189 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script src="/Public/js/jquery-1.4.4.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript" src="/Public/js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+
+	<script>
+    
+	
+	$(document).ready(function(){
+		$.formValidator.initConfig({formID:"form1",autoTip:true,tidyMode:true,onError:function(msg){}});
+		$.formValidator.initConfig({formID:"form1",debug:false,submitOnce:false,
+			onError:function(msg,obj,errorlist){
+				$("#errorlist").empty();
+				$.map(errorlist,function(msg){
+					$("#errorlist").append("<li>" + msg + "</li>")
+				});
+				//alert(msg);
+			},
+			submitAfterAjaxPrompt : ''
+		});
+		
+		$("#loginName").formValidator({onshow:"请输入登录ID",onfocus:"请输入登录ID",oncorrect:"输入正确"}).inputValidator({min:1,max:20,onError:"输入错误，请输入4~20个字!"}).ajaxValidator({
+	        url : "__URL__/checkLoginName",
+	        type : "GET",
+		     //datatype : "json",
+		     data: "id="+escape($("#id").val()),
+		     success : function(msg){
+		               if( escape(msg) == 1 )
+		      {
+		                   return false;
+		      }
+		               else
+		      {
+		                   return true;
+		      }
+		     },
+		     buttons: $("#button"),
+		     error: function(){alert("服务器没有返回数据，可能服务器忙，请重试");},
+		     onerror : "该登录ID已经被使用",
+		     onwait : "正在对登录ID进行合法性校验，请稍候..."
+	    }).defaultPassed();//登录名
+		$("#name").formValidator({onShow:"请输入姓名",onFocus:"请输入姓名",onCorrect:"输入正确"}).inputValidator({min:1,max:20,onError:"输入错误，请输入1~20个字!"});
+		$("#nickName").formValidator({onShow:"请输入称呼",onFocus:"请输入称呼",onCorrect:"输入正确"}).inputValidator({min:1,max:20,onError:"输入错误，请输入1~20个字!"});
+		//$("#email").formValidator({empty:true,onshow:"请输入邮箱",onfocus:"请输入正确格式",oncorrect:"输入正确",defaultValue:"@"}).regexValidator({regexp:"email",datatype:"enum",onerror:"您输入的请输入邮箱格式不正确"});
+		$("#introduction").formValidator({empty:true,onShow:"请输入简介",onFocus:"请输入简介",onCorrect:"输入正确"}).inputValidator({max:100,onError: "简介内容最多100个字!"})
+		$("#sort").formValidator({empty:true,onShow:"请输入序号",onFocus:"请输入数字序号",onCorrect:"输入正确"}).inputValidator({max:10000,onError: "序号最大为10000!"})
+	});
+	</script>
+</head>
+
+<body>
+		
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+			
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('m_agent');
+				</script>
+	
+	
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li><a href="index">已存在的经纪人</a></li>
+			    			<li class="cbar-tag-sel">编辑经纪人</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">编辑经纪人</div>
+    		</div>	
+			<form action="__URL__/update" method="post" name="form1" id="form1" enctype="multipart/form-data">
+					<input type="hidden" id="id" name="id" value="{$vo.id}"/>
+			  <table cellspacing="0" cellpadding="0" border="0" class="table-f">
+					      <tbody>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">登录名：</td>
+					        <td align="left" colspan="2"><input type="text" id="loginName" size="50" name="loginName" value="{$vo.loginName}"></td>
+					        <td align="left" width="35%"><div id="loginNameTip" class="onShow">请输入登录名称</div></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">真实姓名：</td>
+					        <td align="left" colspan="2"><input type="text" id="name" size="50" name="name" value="{$vo.name}"></td>
+					        <td align="left" width="35%"><div id="nameTip" class="onShow">请输入经纪人姓名</div></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">称呼：</td>
+					        <td align="left" colspan="2"><input type="text" id="nickName" size="50" name="nickName" value="{$vo.nickName}"></td>
+					        <td align="left" width="35%"><div id="nickNameTip" class="onShow">请输入称呼</div></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">性别：</td>
+					        <td align="left" colspan="2">
+					        		男<input type="radio" name="sex" value="1" <if condition="$vo.sex eq 1"> checked </if> >&nbsp;
+					        		女<input type="radio" name="sex" value="0" <if condition="$vo.sex eq 0"> checked </if>></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="12%" class="formtdl">入职时间：</td>
+					        <td align="left" colspan="2"><input type="text" id="employmentDate" value="{$vo.employmentDate}" name="employmentDate" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"/>
+					        </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">手机号码：</td>
+					        <td align="left" colspan="2"><input type="text" id="mobile" size="50" value="{$vo.mobile}" name="mobile"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">固定电话号码：</td>
+					        <td align="left" colspan="2"><input type="text" id="tel" size="50" value="{$vo.tel}" name="tel"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">家庭地址：</td>
+					        <td align="left" colspan="2"><input type="text" id="homeAddress" size="50" value="{$vo.homeAddress}" name="homeAddress"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">qq：</td>
+					        <td align="left" colspan="2"><input type="text" id="qq" size="50" name="qq" value="{$vo.qq}"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">电子邮箱：</td>
+					        <td align="left" colspan="2"><input type="text" id="email" size="50" name="email" value="{$vo.email}"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">头像：</td>
+					        <td align="left" colspan="2">
+					        	<img src="{$vo.headPic}" width="100" height="110"/>
+					        <input readonly="readonly" type="file" id="headPic" size="50" name="headPic"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					         
+						  <tr>
+					        <td align="right" width="15%" class="formtdl">简介：</td>
+					        <td align="left" colspan="2"><textarea name="introduction" id="introduction" style="width:278px;height:100px;">{$vo.introduction}</textarea></td>
+					        <td align="left" width="35%"><div id="descriptionTip" class="onShow">请输入个人简介</div></td>
+					      </tr>
+					      
+					       <tr>
+					        <td align="right" width="15%" class="formtdl">显示位置：</td>
+					        <td align="left" colspan="2"><input type="text" name="sort" id="sort" value="{$vo.sort}" /></td>
+					        <td align="left" width="35%"><div id="sortTip" class="onShow">请输入显示位置</div></td>
+					      </tr>
+					      
+					      
+					
+					    </tbody></table>
+					    
+			    
+					    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					      <tbody><tr>
+					          <td align="center">
+					            <input type="submit" value="提交" id="button" class="inp-yd" name="button">
+					            
+					        </td></tr>
+					    </tbody></table>
+			  
+			</form>
+			<div id="output"></div>
+</body>
+</html>

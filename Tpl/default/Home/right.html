@@ -1,0 +1,44 @@
+<div id="contentR">
+			<if condition="$tuanPage eq 1">
+				<div class="ht"><h3>楼盘团购说明</h3></div>
+				<div class="cr_div profile color000 clear">{$com.tuangouDesc}</div>
+			<else/>
+				<div class="ht"><if condition="$indexPage eq 'index' "><h1>{$com.abbreviation}</h1><else /><h3>{$com.abbreviation}</h3></if><span>简介</span></div>
+				<div class="cr_div text-indent2 profile colBB3 clear"><strong>{$com.introduction}</strong></div>
+			</if>
+			
+			<div class="ht rbt"><h3>巨丰置业专家</h3></div>
+			<div>
+				<ul class="house_expert">
+					
+					<foreach name='agentList' item="agent">
+					<li>
+						<div class="house_expert_left">
+							<if condition="$agent.headPic eq ''">
+								<img src="__APP__/Public/js/p7ssm/images/nopic.jpeg" alt="{$agent.nickName}：{$agent.introduction}" width="110" height="115" />
+							<else /> <img src="__APP__{$agent.headPic}" alt="{$agent.nickName}：{$agent.introduction}" width="110" height="115" /></if>	
+						</div>
+						<div class="house_expert_right">
+							<div class="text"><b>{$agent.nickName}：</b>{$agent.introduction}</div>
+							<p class="qq">QQ：<img src="http://wpa.qq.com/pa?p=1:{$agent.qq}:1" alt="点击咨询" width="74" height="23" style="CURSOR: pointer;" onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin={$agent.qq}&site=qq&menu=yes', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0"  ></p>
+							<p>手机：{$agent.mobile}</p>
+						</div>
+						<div class="clear"></div>
+					</li>
+					<li class="grayline clear"></li>
+					</foreach>
+				</ul>
+			</div>
+			
+			<div class="ht rbt"><h3>{$com.cityName}房产资讯</h3></div>
+			
+			<div>
+				
+				<ul class="articlelist">
+					<foreach name="newsList" item="news">
+					<li><a href="__APP__/news/{$news.id}.html" target="_blank">{$news.title}</a></li>
+					</foreach>
+				</ul>
+			</div>
+			
+		</div>

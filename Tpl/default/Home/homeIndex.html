@@ -1,0 +1,226 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$com.abbreviation} - {$com.cityName}二手房网,{$com.cityName}新楼盘,{$com.cityName}租房</title>
+<meta name="keywords" content="{$com.cityName}二手房网,{$com.cityName}二手房,{$com.cityName}新楼盘,{$com.cityName}新房,{$com.cityName}租房">
+<meta name="description" content="{$com.abbreviation}是{$com.cityName}一家专业房地产公司，业务范围：{$com.cityName}二手房、{$com.cityName}新楼盘、{$com.cityName}房屋出租等，更多{$com.cityName}二手房信息，请上{$com.cityName}二手房网！房源热线：{$com.tel}">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />	
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+<script language="JavaScript">
+$(function(){
+	/*-------搜索框--------*/
+	jQueryq=$("#searchText");
+	
+	var defaultValue = '请输入楼盘名称';
+	if(jQueryq.val() ==  defaultValue)jQueryq.css("color","#898989");
+	jQueryq.focus(function(){
+		if($(this).val()==defaultValue)$(this).val("");
+		$(this).css("color","");
+	}).blur(function(){
+		if(!$(this).val()||$(this).val()==defaultValue){
+$(this).css("color","#898989");
+$(this).val(defaultValue);
+		}
+	})
+	$(document).ready(function(){
+		$("#search-form").submit(function(){
+if ($("input[name='name']").val() == '请输入楼盘名称') {
+	$("input[name='name']").attr("value", '');
+}
+		});
+	});
+	/*-----伪selet框--J_select("选择器","下拉框高度")----*/
+	J_select(".select-box",420);
+})
+	var imgpath = 'images';
+	var verifyhash = '94afdd2b';
+	var modeimg = 'mode/house/images';
+	var modeBase = '';
+	var winduid = '';
+	var windid	= '';
+	var groupid	= 'guest';
+	var cateid	= 'index';
+	var mode = 'house';
+</script>
+
+</head>
+<body>
+	<div class="container">
+	<include file="./Tpl/default/Home/head.html" />
+	<script>
+		currentMenu("index");
+	</script>
+	<div class="search">
+			<form action="__APP__/house/search" target="_blank">
+				<input type="hidden" name="type" value="2"/>
+				<div class="select-box">
+					<input type="hidden" value="" name="dist" />
+					<span>区域不限</span>
+					<ul>
+						<li val="">区域不限</li>
+						<volist name="distList" id="dist">
+							<li val="{$dist.id}">{$dist.name}</li>
+						</volist>
+					</ul>
+				</div>
+				
+				<div class="select-box">
+					<input type="hidden" value="" name="price" />
+					<span>价格不限</span>
+					<ul><li val="">价格不限</li>
+						<foreach name='priceArr' item="price">
+							<li val="{$price}">{$key}</li>
+			            </foreach>
+					</ul>
+				</div>
+				<div class="select-box">
+					<input type="hidden" value="" name="houseType" />
+					<span>房型不限</span>
+					<ul><li val="">房型不限</li>
+						<foreach name='houseTypeArr' item="htype">
+							<li val="{$htype}">{$key}</li>
+			            </foreach>
+					</ul>
+				</div>
+				<div class="select-box">
+					<input type="hidden" value="" name="useArea" />
+					<span>面积不限</span>
+					<ul><li val="">面积不限</li>
+						<foreach name='areaArr' item="area">
+							<li val="{$area}">{$key}</li>
+			            </foreach>						
+					</ul>
+				</div>
+				<input type="text" name="keyWord" id="searchText" value="请输入楼盘名称">
+				<input class="btn" type="submit" onclick="if(getObj('searchText').value == '请输入楼盘名称') getObj('searchText').value=''"  value="搜  索" id="searchBt">
+			</form>
+			
+		</div>
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div id="index_content">
+		<div id="contentL" class="fl">
+			<div class="h-box">
+				<div class="ht"><h2>{$com.cityName}新房</h2><span class="more"><a href="__APP__/house/search?type=1" target="_blank">更多{$com.cityName}新房>></a></span></div>
+				
+				
+				<foreach name='houseList' item="house">
+				<div class="ht-box fl" title="{$house.productName}">
+					<div class="pic fl"><a href="__APP__/house/view?id={$house.id}" target="_blank">
+							<if condition="$house.picture eq ''">
+								<img src="__APP__{$com.proDefaultPic}" alt="{$house.productName}" width="144" height="130" />
+							<else /> <img src="__APP__{$house.picture}" alt="{$house.productName}" width="144" height="130" /></if>
+						</a></div>
+					<div class="sx fl">
+						<p><h3><strong><a href="__APP__/house/view?id={$house.id}" target="_blank" title="{$house.productName}">{$house.productName|msubstr=0,22,'utf-8',false}</a></strong></h3></p>
+						<p><strong>户型：</strong>
+							<foreach name='houseTypeArr' item="htype">
+								<if condition="$house.houseType eq $htype">{$key}</if>
+				            </foreach>
+				        </p>
+						<p><strong>面积：</strong>{$house.useArea|number_format=0}㎡</p>
+						<p><strong>价格：</strong><strong class="red font13">{$house.totalPrice|number_format=0}万</strong> <span>{$house.unitPrice|number_format=0,',',''}/每平米</span></p>
+						<!-- <p><strong>开发商：</strong>{$house.develop|msubstr=0,24,'utf-8',false}</p> -->
+						<p><strong>楼盘地址：</strong>{$house.address|msubstr=0,23,'utf-8',false}</p>
+					</div>
+					<div class="clear"></div>
+					<div class="tjsm"><strong class="fl">推荐理由：</strong>{$house.recommendation|msubstr=0,40,'utf-8',false}</div>
+				</div>
+				</foreach>
+				
+				
+				<div class="clear"></div>
+			</div>
+			
+			<!-- <div class="h-box"><a href="houseDetails.html" target="_blank"><img src="__APP__images/test/44994659_07_112634.jpg" width=700 height=80 /></a></div> -->
+			
+			<div class="h-box ">
+				<div class="ht"><h2>{$com.cityName}二手房</h2><span class="more"><a href="__APP__/house/search?type=2" target="_blank">更多{$com.cityName}二手房>></a></span></div>
+				
+				<foreach name='secondHouseList' item="secondhouse">
+				<div class="ht-box fl">
+					<div class="pic fl"><a href="__APP__/house/view?id={$secondhouse.id}" target="_blank">
+						<if condition="$secondhouse.picture eq ''">
+							<img src="__APP__{$com.proDefaultPic}" alt="{$secondhouse.productName}" width="144" height="130" />
+						<else /> <img src="__APP__{$secondhouse.picture}" alt="{$secondhouse.productName}" width="144" height="130" /></if>
+					</a></div>
+					<div class="sx fl">
+						<p><h3><strong><a href="__APP__/house/view?id={$secondhouse.id}" title="{$secondhouse.productName}" target="_blank">{$secondhouse.productName|msubstr=0,22,'utf-8',false}</a></strong></h3></p>
+						<p><strong>户型：</strong>
+							<foreach name='houseTypeArr' item="htype">
+								<if condition="$secondhouse.houseType eq $htype">{$key}</if>
+				            </foreach></p>
+						<p><strong>面积：</strong>{$secondhouse.useArea|number_format=0}㎡</p>
+						<p><strong>价格：</strong><strong class="red font13">{$secondhouse.totalPrice|number_format=0}万</strong> <span>{$secondhouse.unitPrice|number_format=0,',',''}/每平米</span></p>
+						<!-- <p><strong>开发商：</strong>{$secondhouse.develop|msubstr=0,24,'utf-8',false}</p> -->
+						<p><strong>楼盘地址：</strong>{$secondhouse.address|msubstr=0,23,'utf-8',false}</p>
+					</div>
+					<div class="clear"></div>
+					<div class="tjsm"><strong>推荐理由：</strong>{$secondhouse.recommendation|msubstr=0,40,'utf-8',false}</div>
+				</div>
+				</foreach>
+				
+				<div class="clear"></div>
+			</div>
+			
+			<div class="h-box">
+				<div class="ht"><h2>{$com.cityName}房屋出租</h2><span class="more"><a href="__APP__/house/rentHouse" target="_blank">更多{$com.cityName}出租>></a></span></div>
+				
+				<foreach name='rentHouseList' item="rent">
+				<div class="cz-box bgF" >
+					<div class="pic fl">
+						<if condition="$rent.picture eq ''">
+							<img src="__APP__{$com.proDefaultPic}" alt="{$rent.productName}" width="110" height="90" />
+						<else /> <img src="__APP__{$rent.picture}" alt="{$rent.productName}" width="110" height="90" /></if>	
+					</div>
+					<div class="info fl">
+						<p class="title"><a href="__APP__/house/view?id={$rent.id}" target="_blank">{$rent.productName|msubstr=0,28,'utf-8',false}</a></p>
+						<p class="area">{$rent.address|msubstr=0,23,'utf-8',false} </p>
+						<p class="desc">{$rent.recommendation|msubstr=0,40,'utf-8',false}</p>
+						<p class="contact">{$rent.nickName} {$rent.mobile} </p>
+					</div>
+					<div class="price p1 fl"><strong>{$rent.rent|number_format=0,',',''}</strong><span class="moth">元/月</span></div> 
+				</div>
+				</foreach>
+				
+			</div>
+			
+			
+			<div class="h-box">
+				<div class="ht"><h2>{$com.cityName}商铺</h2><span class="more"><a href="__APP__/shangpu/index" target="_blank" title="{$com.cityName}商铺">更多{$com.cityName}商铺>></a></span></div>
+				
+				<foreach name='shangpuList' item="shangpu">
+				<div class="cz-box bgF" >
+					<div class="pic fl">
+						<if condition="$shangpu.picture eq ''">
+							<img src="__APP__{$com.proDefaultPic}" alt="{$shangpu.productName}" width="110" height="90" />
+						<else /> <img src="__APP__{$shangpu.picture}" alt="{$shangpu.productName}" width="110" height="90" /></if>	
+					</div>
+					<div class="info info-a fl">
+						<p class="title"><a href="__APP__/shangpu/{$shangpu.id}.html" target="_blank">{$shangpu.productName|msubstr=0,40,'utf-8',false}</a></p>
+						<p class="area">{$shangpu.address|msubstr=0,40,'utf-8',false} </p>
+						<p class="desc">{$shangpu.recommendation|msubstr=0,40,'utf-8',false}</p>
+						<p class="contact">{$shangpu.nickName} {$shangpu.mobile} </p>
+					</div>
+				</div>
+				</foreach>
+				
+			</div>
+			
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

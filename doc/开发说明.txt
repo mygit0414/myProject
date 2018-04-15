@@ -1,0 +1,11 @@
+1.搜索下拉菜单不能默认选中
+  需要加类似的代码
+  	//设置菜单默认选中
+	  foreach($distList as $key =>$val) {
+			if($val["id"] == $districtID){
+				$view_distName = $val["name"];
+			}
+		}
+		$this->assign("view_distName", $view_distName);
+2.百度地图不能默认显示
+  正常设置后如果不行，清缓存重启浏览器应该就可以。

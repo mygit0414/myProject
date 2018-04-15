@@ -1,0 +1,109 @@
+<div id="p7ssm">
+      <div id="p7ssm_cf">&nbsp;</div>
+     <div id="p7ssm_loading"><img src="__APP__" /></div>
+      <table id="p7ssm_fstbl" border="0" cellpadding="0" cellspacing="0" summary="Fullsize Image">
+        <tr>
+          <td><div id="p7ssm_fullsize">
+              <div id="p7ssm_fsc">
+                <div id="p7ssm_fsw">
+                  <div id="p7ssm_fsimg"><a href="javascript:;" id="p7ssm_fslink">
+                  <if condition="$picNum eq 0">
+                  	<img src="__APP____PUBLIC__/js/p7ssm/images/nopic.jpeg" alt="{$com.abbreviation}" name="p7ssm_im" width="250" height="245" border="0" id="p7ssm_im" />
+                  <else />
+                  	<img src="__APP____PUBLIC__/images/loading.gif" alt="{$com.abbreviation}" name="p7ssm_im" width="250" height="245" border="0" id="p7ssm_im" />
+                  </if>
+                  </a></div>
+                  <div id="p7ssm_description"></div>
+                </div>
+              </div>
+            </div></td>
+        </tr>
+      </table>
+      <div id="p7SSMwhmb">
+        <div id="p7ssm_thumbs">
+          <div id="p7SSMwp_1">
+            <div class="p7ssm_thumb_section">
+              <ul><!-- 修改内容开始 -->
+
+				<foreach name='picList' item="pic"  key="i">
+				<if condition="$i lt 4">
+	                <li style="margin-left:2px;"><a href="__APP__{$pic.bigPicUrl}">
+					<img src="__APP__{$pic.thumb}" alt="{$pic.title}" width="250" height="245" /></a>
+	                  <div class="p7ssm_lk"></div>
+	                  <div class="p7ssm_fd">{$pic.title}</div>
+	                </li>
+                </if>
+                </foreach>
+                
+              <!-- 修改内容结束 --></ul>
+              <br class="p7ssm_clearThumbs" />
+            </div>
+          </div>
+        </div>
+      </div>
+      
+     <div id="picMoreLink"><a href="#pic">共有{$picNum}张房源图片，查看全部>>></a></div>
+      
+      <div id="p7ssm_toolbar">
+        <div class="p7ssm_sectionTrigger"><a id="p7SSMtp_1" href="#">New Image Set</a></div>
+        <div id="p7ssm_dragbar" title="Move"><span>Move</span></div>
+        <div id="p7ssm_preview">   
+          <table summary="Thumbnail Preview">
+            <tr>
+              <td><img src="__APP____PUBLIC__/js/p7ssm/images/biaozhi.gif" alt="{$com.abbreviation}" /></td>
+            </tr>
+          </table>
+        </div>
+        <div id="p7ssm_tools">
+          <table border="0" cellpadding="0" cellspacing="0" summary="Slideshow Toolbar">
+            <tr>
+              <td><div id="p7ssm_nav_wrapper"><a id="p7SSMtnav" href="#" title="Menu"><em>Navigate</em></a>
+                  <div id="p7SSMwnav">
+                    <div id="p7ssm_navList">
+                      <ul>
+                        <li></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div></td>
+              <td><a href="#" title="Hide or Show Thumbnails" id="p7SSMthmb"><em>Hide Thumbs</em></a></td>
+              <td><a href="#" id="p7ssm_first" title="First Image"><em>First</em></a></td>
+              <td><a href="#" id="p7ssm_prev" title="Previous Image"><em>Previous</em></a></td>
+              <td><a href="#" id="p7ssm_pp" class="p7ssm_pause" title="Pause"><em>Pause</em></a></td>
+              <td><a href="#" id="p7ssm_next" title="Next Image"><em>Next</em></a></td>
+              <td><a href="#" id="p7ssm_last" title="Last Image"><em>Last</em></a></td>
+              <td><div id="p7ssm_slidechannel">
+                  <div id="p7ssm_slider"><a href="#" id="p7ssm_slidebar" title="Speed:"><em>Set Speed</em></a></div>
+                                  </div></td>
+               </tr>
+          </table>
+        </div>
+      </div>
+      
+<!--[if IE 7]>
+<style>
+#p7ssm, #p7ssm div {zoom: 1;}
+</style><![endif]-->
+<!--[if IE 6]><style>
+#p7ssm a, #p7ssm, #p7ssm div, #p7ssm_thumb_wrapper {zoom: 1;}
+.p7ssm_thumb_section {padding-right: 0; padding-left: 0;}
+.p7ssm_thumb_section a {float: left;}
+</style><![endif]-->
+<!--[if IE 5]><style>
+#p7ssm {}
+.p7ssm_sectionTrigger {text-align: left;}
+#p7ssm_navList li {float: left; clear:both; width: 100%;}
+#p7ssm, #p7ssm_w1, #p7ssm_w2, #p7ssm_description, #p7ssm_preview,
+#p7ssm_navList a, .p7ssm_sectionTrigger a, #p7ssm_thumbs,
+.p7ssm_thumb_section, #p7ssm_fsw {height: 1%;}
+.p7ssm_thumb_section {padding: 0;}
+</style><![endif]-->
+<!--[if IE 5.5000]><style>
+#p7ssm, #p7ssm_w1, #p7ssm_w2 {zoom: 1;}
+</style><![endif]-->
+<script type="text/javascript">
+<!--
+P7_SSMinit(1,1,1,1,0,1,1,1,5);
+//-->
+</script>
+</div>

@@ -1,0 +1,58 @@
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+#重定向到www.jufengfc.com
+RewriteBase /
+RewriteCond %{HTTP_HOST} !^www.jufengfc.com$ [NC]
+RewriteRule ^(.*)$ http://www.jufengfc.com/$1 [L,R=301]
+
+#不显示index.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ /index.php/$1 [QSA,PT,L]
+
+#RewriteRule /shangpu/index.html /shangpu/index?saletype=%1
+#/shangpu/index2 访问/shangpu/index?saletype=2
+RewriteRule /shangpu/index(2)$ /shangpu/index?saletype=$1
+RewriteRule /shangpu/([0-9]+).html$ /shangpu/view?id=$1
+
+RewriteRule /tuangou/view-([0-9]+).html$ /tuangou/view?id=$1
+
+RewriteRule /house/$ /house/search?type=2 [R=301]
+
+RewriteRule /house/rentHouse-page-([0-9]+).html$ /house/rentHouse?&p=$1
+RewriteRule /shangpu/index/([0-9]+).html$ /shangpu/index?&p=$1
+RewriteRule /tuangou/index/([0-9]+).html$ /tuangou/index?&p=$1
+RewriteRule /dipi/index/([0-9]+).html$ /dipi/index?&p=$1
+
+RewriteRule /dichan$ /dichan/chuzu [R=301]
+RewriteRule /dichan/$ /dichan/chuzu [R=301]
+RewriteRule /dichan/zhuanran$ /dichan/index?saletype=2
+RewriteRule /dichan/chuzu$ /dichan/index?saletype=1
+
+RewriteRule /changfang$ /changfang/chuzu [R=301]
+RewriteRule /changfang/$ /changfang/chuzu [R=301]
+RewriteRule /changfang/chuzu$ /dichan/index?type=6&saletype=1
+RewriteRule /changfang/zhuanran$ /dichan/index?type=6&saletype=2
+
+RewriteRule /dipi$ /dipi/chuzu [R=301]
+RewriteRule /dipi/$ /dipi/chuzu [R=301]
+RewriteRule /dipi/chuzu$ /dichan/index?type=7&saletype=1
+RewriteRule /dipi/zhuanran$ /dichan/index?type=7&saletype=2
+
+RewriteRule /cangku$ /cangku/chuzu [R=301]
+RewriteRule /cangku/$ /cangku/chuzu [R=301]
+RewriteRule /cangku/chuzu$ /dichan/index?type=8&saletype=1
+RewriteRule /cangku/zhuanran$ /dichan/index?type=8&saletype=2
+
+RewriteRule /qitadc$ /qitadc/chuzu [R=301]
+RewriteRule /qitadc/$ /qitadc/chuzu [R=301]
+RewriteRule /qitadc/chuzu$ /dichan/index?type=10&saletype=1
+RewriteRule /qitadc/zhuanran$ /dichan/index?type=10&saletype=2
+
+RewriteRule /dichan/([0-9]+).html$ /dichan/view?id=$1
+
+RewriteRule /news/([0-9]+).html$ /news/view?id=$1
+
+</IfModule>

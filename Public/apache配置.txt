@@ -1,0 +1,32 @@
+隐藏index.php 分4步：
+
+httpd.conf配置
+1、加载了 mod_rewrite.so
+确认加载了 mod_rewrite.so 模块（将如下配置前的 # 号去掉）：
+LoadModule rewrite_module modules/mod_rewrite.so
+
+
+2.修改服务器目录配置，注意可能有多<directory>，不要弄错。
+<Directory "d:/wamp/www/">
+    AllowOverride all
+    Options None
+    Order allow,deny
+    Allow from all
+</Directory>
+
+3.在项目的目录建.htaccess文件，内容为
+Options +FollowSymLinks
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+#不显示index.php
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
+
+</IfModule>
+
+4.config.php：
+'URL_MODEL'             => 2,         //URL重定义模式
+'URL_ROUTER_ON'	        => true,        //使用 URL 路由功能

@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link rel="stylesheet" type="text/css" href="/Public/css/admin/style.css" />
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	
+</head>
+
+<body>
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+			
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				
+				<script>
+		menusel('m_district');
+	</script>
+	
+	
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li class="cbar-tag-sel"><a href="index">已存在的行政区域</a></li>
+			    			<li><a href="add">增加行政区域</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">行政区域列表</div>
+    		</div>	
+            <table align="center" width="100%" cellspacing="0" cellpadding="0" border="0" class="table_b">
+              <tbody><tr class="tab-top">
+                <td align="center"><strong>区域编号</strong></td>
+                <td align="center" width="15%"><strong>名称</strong></td>
+                <td align="center"><strong>说明</strong></td>
+                
+                <td align="center" width="11%"><strong>操作</strong></td>
+              </tr>              
+               
+              <volist name="distList" id="dist">
+	              <tr onmouseout="this.className=&quot;table-d-c&quot;" onmouseover="this.className=&quot;td-m&quot;" class="table-d-c">
+					<td align="center">{$dist.id}</td>
+	                <td align="center">{$dist.name}</td>
+	                <td align="center">{$dist.description}</td>
+	          
+	                <td align="center"><a href="edit?id={$dist.id}">编辑</a> |
+	                 <a onclick="return   confirm( '是否需要删除? ');" href="del?id={$dist.id}">删除</a>
+	                </td>
+	              </tr>
+			  </volist>
+               
+
+            </tbody></table>
+            
+             
+             
+  	
+				
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$com.cityName}{$title}{$saleTypeName} - {$com.abbreviation}</title>
+<meta name="keywords" content="{$keywords}">
+<meta name="description" content="{$description}">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+	
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	
+		<script>
+			currentMenu("dipi");
+		</script>
+
+	
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/">{$com.abbreviation}</a> &gt; 
+		<a href="__APP__/dichan/chuzu">{$com.cityName}厂房/仓库/地皮</a>
+	</div>
+	
+	<div id="index_content">
+	
+		<div id="contentL" class="fl">
+			<!-- <div class="h-box"><a href="#" target="_blank"><img src="__APP____PUBLIC__/images/test/44994659_07_112634.jpg" width="700" height="80" /></a></div> -->
+			
+			<div class="typeItem">
+				<if condition="$saleType eq '1'">
+					<span  class="select" ><h1><a href="__APP__/{$typeLink}/chuzu" title="{$com.cityName}{$typeName}出租">出租</a></h1></span> 
+				<else />
+					<span><a href="__APP__/{$typeLink}/chuzu" title="{$com.cityName}{$typeName}出租">出租</a></span> 
+				</if>
+				<if condition="$saleType eq '2'">
+					<span  class="select" ><h1><a href="__APP__/{$typeLink}/zhuanran" title="{$com.cityName}{$typeName}转让">转让</a></h1></span> 
+				<else />
+					<span><a href="__APP__/{$typeLink}/zhuanran" title="{$com.cityName}{$typeName}转让">转让</a></span> 
+				</if>
+				
+				<div class="rad">
+				    <p class="input_in">
+				        <input type="radio" <if condition="$type eq ''"> checked="checked"  <else /> onclick="window.location=this.value"  value="__APP__/dichan/chuzu"  </if> autocomplete="off" id="id_tab_dichan" name="tab_agent">
+				    	<label for="id_tab_dichan"><if condition="$type eq ''"><strong>全部</strong><else />全部</if></label></p>
+				    <p class="input_in">
+				        <input type="radio" <if condition="$type eq '6'"> checked="checked"  <else /> onclick="window.location=this.value"  value="__APP__/changfang/chuzu"  </if> autocomplete="off" id="id_tab_dichan_a" name="tab_agent">
+				        <label for="id_tab_dichan_a"><if condition="$type eq '6'"> <strong>厂房</strong><else />厂房</if></label></p>
+				    <p class="input_in">
+				        <input type="radio"  <if condition="$type eq '7'"> checked="checked"  <else /> onclick="window.location=this.value"  value="__APP__/dipi/chuzu"  </if> autocomplete="off" id="id_tab_dichan_b" name="tab_agent">
+				    	<label for="id_tab_dichan_b"><if condition="$type eq '7'"> <strong>地皮</strong> <else />地皮</if></label></p>
+				   <p class="input_in">
+				        <input type="radio"  <if condition="$type eq '8'"> checked="checked"  <else /> onclick="window.location=this.value"  value="__APP__/cangku/chuzu"  </if> autocomplete="off" id="id_tab_dichan_c" name="tab_agent">
+				     	<label for="id_tab_dichan_c"><if condition="$type eq '8'"> <strong>仓库</strong> <else />仓库</if></label></p>
+				    <p class="input_in">
+				        <input type="radio"  <if condition="$type eq '10'"> checked="checked"  <else /> onclick="window.location=this.value"  value="__APP__/qitadc/chuzu"  </if> autocomplete="off" id="id_tab_dichan_d" name="tab_agent">
+				    	<label for="id_tab_dichan_d"><if condition="$type eq '10'"> <strong>其他</strong>  <else />其他</if></label></p>
+			    </div>
+			</div>
+			<div class="h-box border0">
+				<!-- <div class="ht"><h1>容桂租房</h1></div> -->
+				
+				<foreach name='dichanList' item="dichan">
+				<div class="cz-box" >
+					<div class="pic fl">
+						<if condition="$dichan.picture eq ''">
+							<img src="__APP__{$com.proDefaultPic}" alt="{$dichan.productName}" width="110" height="90" />
+						<else /> <img src="__APP__{$dichan.picture}" alt="{$dichan.productName}" width="110" height="90" /></if>
+					</div>
+					<div class="info info478 fl">
+						<p class="title"><a href="__APP__/dichan/{$dichan.id}.html" target="_blank">{$dichan.productName|msubstr=0,32,'utf-8',false}</a></p>
+						<p class="area">{$dichan.address|msubstr=0,36,'utf-8',false} </p>
+						<p class="desc">{$dichan.recommendation|msubstr=0,36,'utf-8',false} </p>
+						<p class="contact">{$dichan.nickName} {$dichan.mobile}</p>
+					</div>
+					<div class="price fl">
+						
+							<if condition="$saleType eq '1'">
+								<p><strong>{$dichan.rent|number_format=0,',',''}</strong><span class="moth">元/月</span></p>
+							</if>
+							<if condition="$saleType eq '2'">
+								<p class="salePrice">售价<br/><strong>{$dichan.totalPrice|number_format=0,',',''}</strong><span class="moth">万元</span></p>
+							</if>
+						
+					</div> 
+				</div>
+				</foreach>
+				
+				<empty name="dichanList"><div class="noData"><!-- <img src="__APP____PUBLIC__/images/10095S534-23.png" /> -->抱歉，暂时没有发布有关“<strong class="red"><if condition="$type eq '6'">厂房</if><if condition="$type eq '7'">地皮</if><if condition="$type eq '8'">仓库</if><if condition="$type eq '10'">其他</if><if condition="$saleType eq '1'">出租</if><if condition="$saleType eq '2'">转让</if></strong>”的信息，请查看其他类型地产或查看“<if condition="$type eq '6'">厂房</if><if condition="$type eq '7'">地皮</if><if condition="$type eq '8'">仓库</if><if condition="$type eq '10'">其他</if><if condition="$saleType eq '1'">转让</if><if condition="$saleType eq '2'">出租</if>”信息，您也可以直接联系我们：{$com.tel}</div></empty>
+				<div class="page">{$page}</div>
+			</div>
+			
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	
+	<div id="links">
+		<dl id="relate">
+		<dt>相关信息：</dt>
+		<dd>
+			<ul>
+             	<li><a href="__APP__/changfang/chuzu" target="_blank">{$com.cityName}厂房出租</a></li>
+                <li><a href="__APP__/changfang/zhuanran" target="_blank">{$com.cityName}厂房转让</a></li>
+                <li><a href="__APP__/dipi/chuzu" target="_blank">{$com.cityName}仓库出租</a></li>
+                <li><a href="__APP__/dipi/zhuanran" target="_blank">{$com.cityName}仓库转让</a></li>
+                <li><a href="__APP__/cangku/chuzu" target="_blank">{$com.cityName}地皮出租</a></li>
+                <li><a href="__APP__/cangku/zhuanran" target="_blank">{$com.cityName}地皮转让</a></li>
+                <li><a href="__APP__/qitadc/chuzu" target="_blank">{$com.cityName}其他类型地产出租</a></li>
+                <li><a href="__APP__/qitadc/zhuanran" target="_blank">{$com.cityName}其他类型房产转让</a></li>
+		 		</ul>
+		 	</dd>
+		 	</dl>
+	</div>
+			
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

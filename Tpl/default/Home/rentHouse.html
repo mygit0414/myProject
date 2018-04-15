@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>【{$com.cityName}租房|{$com.cityName}房屋出租】 - {$com.abbreviation}</title>
+<meta name="keywords" content="{$com.cityName}租房,{$com.cityName}房屋出租">
+<meta name="description" content="{$com.cityName}租房网,提供大量的{$com.cityName}租房房源,{$com.cityName}租房信息,想租房,租好房,上{$com.cityName}租房网.">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+<script language="JavaScript">
+jQuery(function(){
+	/*-------搜索框--------*/
+	jQueryq=jQuery("#searchText");
+	
+	var defaultValue = '请输入楼盘名称';
+	if(jQueryq.val() ==  defaultValue)jQueryq.css("color","#898989");
+	jQueryq.focus(function(){
+		if(jQuery(this).val()==defaultValue)jQuery(this).val("");
+		jQuery(this).css("color","");
+	}).blur(function(){
+		if(!jQuery(this).val()||jQuery(this).val()==defaultValue){
+jQuery(this).css("color","#898989");
+jQuery(this).val(defaultValue);
+		}
+	})
+	jQuery(document).ready(function(){
+		jQuery("#search-form").submit(function(){
+			var val = jQuery("input[name='keyWord']").val();
+			jQuery("input[name='keyWord']").attr("value", val.trim());
+if (jQuery("input[name='keyWord']").val() == '请输入楼盘名称') {
+	jQuery("input[name='keyWord']").attr("value", '');
+}
+		});
+	});
+	/*-----伪selet框--J_select("选择器","下拉框高度")----*/
+	J_select(".select-box",420);
+})
+	var imgpath = 'images';
+	var verifyhash = '94afdd2b';
+	var modeimg = 'mode/house/images';
+	var modeBase = '';
+	var winduid = '';
+	var windid	= '';
+	var groupid	= 'guest';
+	var cateid	= 'index';
+	var mode = 'house';
+</script>
+
+</head>
+<body>
+	<div class="container">
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	
+		<script>
+			currentMenu("rent");
+		</script>
+
+	
+	<div class="search">
+			<form action="__APP__/house/rentHouse" id="search-form">
+				<div class="select-box">
+					<input type="hidden" value="{$districtID}" name="dist" />
+					<span>
+						<empty name="view_distName">区域不限<else />{$view_distName}</empty>
+					</span>
+					<ul>
+						<li val="">区域不限</li>
+						<volist name="distList" id="dist">
+							<li val="{$dist.id}" <eq name="dist['id']" value="$districtID" >class="selected" selected="selected"</eq>  >{$dist.name}</li>
+						</volist>
+					</ul>
+				</div>
+				
+				<div class="select-box">
+					<input type="hidden" value="" name="price" />
+					<span>
+						<empty name="view_price">价格不限<else/>{$view_price}</empty>
+					</span>
+					<ul>
+						<li val="">价格不限</li>
+						<volist name="priceArr" id="price">
+							<li val="{$price}" <if condition="$totalPrice eq $price">class="selected" selected="selected"</if> >{$key}</li>
+						</volist>
+					</ul>
+				</div>
+				<div class="select-box">
+					<input type="hidden" value="{$houseType}" name="houseType" />
+					<span><empty name="view_houseType">房型不限<else/>{$view_houseType}</empty></span>
+					<ul>
+						<li val="">房型不限</li>
+						<volist name="houseTypeArr" id="houseTypeAr">
+							<li val="{$houseTypeAr}" <if condition="$houseTypeAr eq $houseType">class="selected" selected="selected"</if> >{$key}</li>
+						</volist>
+					</ul>
+				</div>
+				
+				<input type="text" name="keyWord" id="searchText" value="<empty name="keyWord">请输入楼盘名称</empty>{$keyWord}">
+				<input class="btn" type="submit" value="搜  索" >
+			</form>
+			
+		</div>
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/" >{$com.abbreviation}</a> &gt; 
+		<a href="__APP__/house/search?type=2">{$com.cityName}租房</a>
+	</div>
+	<div id="index_content">
+		<div id="contentL" class="fl">
+			<!-- <div class="h-box"><a href="#" target="_blank"><img src="__APP____PUBLIC__/images/test/44994659_07_112634.jpg" width="700" height="80" /></a></div> -->
+				
+			
+			<div class="h-box">
+				<div class="ht"><h1>{$com.cityName}租房</h1></div>
+				
+				<foreach name='rentHouseList' item="rent">
+				<div class="cz-box bgF" >
+					<div class="pic fl">
+						<if condition="$rent.picture eq ''">
+							<img src="__APP__{$com.proDefaultPic}" alt="{$rent.productName}" width="110" height="90" />
+						<else /> <img src="__APP__{$rent.picture}" alt="{$rent.productName}" width="110" height="90" /></if>
+					</div>
+					<div class="info fl">
+						<p class="title"><a href="__APP__/house/view?id={$rent.id}" target="_blank">{$rent.productName|msubstr=0,30,'utf-8',false}</a></p>
+						<p class="area">{$rent.address|msubstr=0,23,'utf-8',false} </p>
+						<p class="desc">{$rent.recommendation|msubstr=0,40,'utf-8',false} </p>
+						<p class="contact">{$rent.nickName} {$rent.mobile} </p>
+					</div>
+					<div class="price fl"><p><strong>{$rent.rent|number_format=0,',',''}</strong><span class="moth">元/月</span></p></div> 
+				</div>
+				</foreach>
+				
+				<empty name="rentHouseList"><div class="noData"><img src="__APP__/images/10095S534-23.png" />没有匹配的房源，请修改查询条件</div></empty>
+				<div class="page">{$page}</div>
+			</div>
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

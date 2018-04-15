@@ -1,0 +1,17 @@
+<notempty name="noteList">
+<div class="news">
+		<marquee direction="left" scrollamount=3　 onMouseOver=this.stop() onMouseOut=this.start()>
+		
+		<foreach name='noteList' item="note">
+			<span><a href="{$note.link}" target="_blank">{$note.title}</a></span>
+		</foreach>
+		</marquee>
+	 
+</div>
+
+</notempty>
+
+<!-- 首页没有导航，设置距离顶部10像素，如果有滚动新闻的话就不要这个DIV -->
+<if condition="$indexPage eq 'index' ">
+	<div class="mt10"></div>
+</if>

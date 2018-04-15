@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script src="/Public/js/jquery-1.4.4.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	<!--在线编辑器引用-->
+	<script type="text/javascript" src="/Public/js/ckeditor/ckeditor.js"></script>
+	<!--在线编辑器引用-->
+</head>
+
+<body>
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+				
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('p_tuangou');
+				</script>
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li><a href="index">团购查询</a></li>
+			    			<li><a href="add">发布团购</a></li>
+			    			<li class="cbar-tag-sel">团购说明</li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+
+       		
+       		<form id="form1" name="form1" method="post" action="__URL__/updateTuanGouDesc">
+       		   <input type="hidden" name="id" id="id" value="{$com.id}" />
+		      
+		     
+		    <div class="ydbar">
+		      <div class="info-title">设置团购全局说明</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        <td><textarea class="ckeditor" name="tuangouDesc" cols="10" rows="5"  id="tuangouDesc" >{$com.tuangouDesc}</textarea>
+		        </td>
+		      </tr>
+		   		     
+		    </tbody></table>
+		    
+		    
+    
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		          <td align="center">
+		            <input type="submit" value="确定" id="button" class="inp-yd" name="button">
+		            
+		        </td></tr>
+		    </tbody></table>
+		  </form>
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

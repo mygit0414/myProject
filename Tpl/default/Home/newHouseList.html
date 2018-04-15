@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>【{$com.cityName}新楼盘,{$com.cityName}新房,{$com.cityName}一手房】 - {$com.abbreviation}</title>
+<meta name="keywords" content="{$com.cityName}新楼盘,{$com.cityName}新房,{$com.cityName}一手房">
+<meta name="description" content="{$com.cityName}新楼盘网隶属{$com.companyName},{$com.cityName}新楼盘网提供最新最全{$com.cityName}新楼盘信息,{$com.cityName}房价信息和正确的{$com.cityName}新房购买指南.">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+<script language="JavaScript">
+jQuery(function(){
+	/*-------搜索框--------*/
+	jQueryq=jQuery("#searchText");
+	
+	var defaultValue = '请输入楼盘名称';
+	if(jQueryq.val() ==  defaultValue)jQueryq.css("color","#898989");
+	jQueryq.focus(function(){
+		if(jQuery(this).val()==defaultValue)jQuery(this).val("");
+		jQuery(this).css("color","");
+	}).blur(function(){
+		if(!jQuery(this).val()||jQuery(this).val()==defaultValue){
+jQuery(this).css("color","#898989");
+jQuery(this).val(defaultValue);
+		}
+	})
+	jQuery(document).ready(function(){
+		jQuery("#search-form").submit(function(){
+			var val = jQuery("input[name='keyWord']").val();
+			jQuery("input[name='keyWord']").attr("value", val.trim());
+if (jQuery("input[name='keyWord']").val() == '请输入楼盘名称') {
+	jQuery("input[name='keyWord']").attr("value", '');
+}
+		});
+	});
+	/*-----伪selet框--J_select("选择器","下拉框高度")----*/
+	J_select(".select-box",420);
+})
+	var imgpath = 'images';
+	var verifyhash = '94afdd2b';
+	var modeimg = 'mode/house/images';
+	var modeBase = '';
+	var winduid = '';
+	var windid	= '';
+	var groupid	= 'guest';
+	var cateid	= 'index';
+	var mode = 'house';
+</script>
+
+</head>
+<body>
+	<div class="container">
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	<eq name="type" value="1" >
+		<script>
+			currentMenu("new");
+		</script>
+	</eq>
+	
+	<eq name="type" value="2" >
+		<script>
+			currentMenu("second");
+		</script>
+	</eq>
+	<div class="search">
+			<form action="__APP__/house/search" id="search-form">
+				<input type="hidden" name="type" value="1"/>
+				<div class="select-box">
+					<input type="hidden" value="{$districtID}" name="dist" />
+					<span>
+						<empty name="view_distName">区域不限<else />{$view_distName}</empty>
+					</span>
+					<ul>
+						<li val="">区域不限</li>
+						<volist name="distList" id="dist">
+							<li val="{$dist.id}" <eq name="dist['id']" value="$districtID" >class="selected" selected="selected"</eq>  >{$dist.name}</li>
+						</volist>
+					</ul>
+				</div>
+				
+				<div class="select-box">
+					<input type="hidden" value="" name="price" />
+					<span>
+						<empty name="view_price">价格不限<else/>{$view_price}</empty>
+					</span>
+					<ul>
+						<li val="">价格不限</li>
+						<volist name="priceArr" id="price">
+							<li val="{$price}" <if condition="$totalPrice eq $price">class="selected" selected="selected"</if> >{$key}</li>
+						</volist>
+					</ul>
+				</div>
+				<div class="select-box">
+					<input type="hidden" value="{$houseType}" name="houseType" />
+					<span><empty name="view_houseType">房型不限<else/>{$view_houseType}</empty></span>
+					<ul>
+						<li val="">房型不限</li>
+						<volist name="houseTypeArr" id="houseTypeAr">
+							<li val="{$houseTypeAr}" <if condition="$houseTypeAr eq $houseType">class="selected" selected="selected"</if> >{$key}</li>
+						</volist>
+					</ul>
+				</div>
+				<div class="select-box">
+					<input type="hidden" value="{$useArea}" name="useArea" />
+					<span><empty name="view_area">面积不限<else/>{$view_area}</empty></span>
+					<ul>
+						<li val="">面积不限</li>
+						<volist name="areaArr" id="area">
+							<li val="{$area}" <if condition="$area eq $useArea">class="selected" selected="selected"</if> >{$key}</li>
+						</volist>
+					</ul>
+				</div>
+				<input type="text" name="keyWord" id="searchText" value="<empty name="keyWord">请输入楼盘名称</empty>{$keyWord}">
+				<input class="btn" type="submit" value="搜  索" >
+			</form>
+			
+		</div>
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/">{$com.abbreviation}</a> &gt; 
+		<a href="__APP__/house/search?type=1" >{$com.cityName}新房</a>
+	</div>
+
+	<div id="index_content">
+		<div id="contentL" class="fl">
+			<!-- <div class="h-box"><a href="#" target="_blank"><img src="__APP____PUBLIC__/images/test/44994659_07_112634.jpg" width=700 height=80/></a></div> -->
+				
+			
+			<div class="h-box">
+				<div class="ht"><h1>{$com.cityName}新楼房</h1></div>
+				
+				<foreach name='houseList' item="house">
+					<div class="cz-box bgF" >
+						<div class="pic fl">
+							<if condition="$house.picture eq ''">
+								<img src="__APP__{$com.proDefaultPic}" alt="{$house.productName}" width="110" height="90" />
+							<else /> <img src="__APP__{$house.picture}" alt="{$house.productName}" width="110" height="90" /></if>
+						
+						</div>
+						<div class="info fl">
+							<p class="title"><a href="__APP__/house/view?id={$house.id}" target="_blank" title="{$house.productName}">{$house.productName|msubstr=0,33,'utf-8',false}</a></p>
+							<p class="address">{$house.address|msubstr=0,23,'utf-8',false} </p>
+							<p class="desc">{$house.recommendation|msubstr=0,32,'utf-8',false} </p>
+							<p class="contact">{$house.nickName}</p>
+						</div>
+						<div class="right_info fl">
+								<div class="up">
+									<foreach name='houseTypeArr' item="htype">
+										<if condition="$house.houseType eq $htype">{$key}</if>
+						            </foreach>
+					            </div>
+								<div>{$house.area|number_format=0}㎡</div>
+						</div> 
+						<div class="price fl">
+								<div class="totalPrice"><span class="totalP-left">{$house.totalPrice|number_format=0}</span>万</div>
+								<div>{$house.unitPrice|number_format=0,".",""}元/㎡</div>
+						</div> 
+					</div>
+				</foreach>
+				
+				<empty name="houseList"><div class="noData"><img src="__APP____PUBLIC__/images/10095S534-23.png" />没有匹配的房源，请修改查询条件</div></empty>
+				
+				<div class="page">{$page}</div>
+			</div>
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	<script src="/Public/js/jquery-1.4.4.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+	<script>
+	$(document).ready(function(){
+		$.formValidator.initConfig({formID:"form1",autoTip:true,tidyMode:true,onError:function(msg){}});
+		
+		
+	    $("#companyName").formValidator({onShow:"请公司名称",onFocus:"至少1个长度",onCorrect:"输入正确"}).inputValidator({min:1,max:30,onError:"内容输入不正确，请确认"});
+	});
+	</script>
+</head>
+
+<body>
+		
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+			
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('m_cominfo');
+				</script>
+	
+	
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li class="cbar-tag-sel"><a href="index" >编辑公司信息</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">编辑公司信息</div>
+    		</div>	
+			<form action="__URL__/update" method="post" name="form1" id="form1" enctype="multipart/form-data">
+					<input type="hidden" id="id" name="id" value="{$vo.id}"/>
+			  <table cellspacing="0" cellpadding="0" border="0" class="table-f">
+					      <tbody>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">公司名称：</td>
+					        <td align="left" colspan="2"><input type="text" id="companyName" size="50" name="companyName" value="{$vo.companyName}"></td>
+					        <td align="left" width="35%"><div id="companyNameTip" class="onShow">请输入公司名称</div></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">公司简称：</td>
+					        <td align="left" colspan="2"><input type="text" id="abbreviation" size="50" name="abbreviation" value="{$vo.abbreviation}"></td>
+					        <td align="left" width="35%"><div id="abbreviationTip" class="onShow"></div></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">logo：</td>
+					        <td align="left" colspan="2">
+					        	<img src="/{$vo.logo}" width="100" height="110"/>
+					        <input readonly="readonly" type="file" id="logo" size="50" name="logo"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="12%" class="formtdl">头部提示语：</td>
+					        <td align="left" colspan="2"><input type="text" id="headTip" value="{$vo.headTip}" size=80 name="headTip"/>
+					        </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">公司电话：</td>
+					        <td align="left" colspan="2"><input type="text" id="tel" size="50" value="{$vo.tel}" name="tel"></td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">公司所在城市名称：</td>
+					        <td align="left" colspan="2">{$vo.cityName}</td>
+					        <td align="left" width="35%"></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">简介：</td>
+					        <td align="left" colspan="2"><textarea name="introduction" id="introduction" style="width:500px;height:100px;">{$vo.introduction}</textarea></td>
+					        <td align="left" width="35%"><div id="descriptionTip" class="onShow"></div></td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">关于我们：</td>
+					        <td align="left" colspan="2"><textarea id="about" class="comTextArea" name="about">{$vo.about}</textarea> </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">版权声明：</td>
+					        <td align="left" colspan="2"><textarea id="copyright" class="comTextArea" name="copyright">{$vo.copyright}</textarea> </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+						 
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">免责声明：</td>
+					        <td align="left" colspan="2"><textarea id="disclaimer" class="comTextArea" name="disclaimer">{$vo.disclaimer}</textarea> </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">联系我们：</td>
+					        <td align="left" colspan="2"><textarea id="contactUs" class="comTextArea" name="contactUs">{$vo.contactUs}</textarea> </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					      <tr>
+					        <td align="right" width="15%" class="formtdl">免责声明：</td>
+					        <td align="left" colspan="2"><textarea id="disclaimer" class="comTextArea" name="disclaimer">{$vo.disclaimer}</textarea> </td>
+					        <td align="left" width="35%">&nbsp;</td>
+					      </tr>
+					      
+					
+					    </tbody></table>
+					    
+			    
+					    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+					      <tbody><tr>
+					          <td align="center">
+					            <input type="submit" value="提交" id="button" class="inp-yd" name="button">
+					            
+					        </td></tr>
+					    </tbody></table>
+			  
+			</form>
+			<div id="output"></div>
+</body>
+</html>

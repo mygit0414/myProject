@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$product.communityName}：{$product.productName},{$com.cityName}新房团购 - {$com.abbreviation}</title>
+<meta name="keywords" content="{$com.cityName}新房团购">
+<meta name="description" content="{$page_description|msubstr=0,150,'utf-8',false}">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/tuan.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script><!-- 这个js当前没有使用到，但common.js有使用，会报错，所以引入 -->
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+<script>
+function apply(){
+	var mobile = "{$agent.mobile}";
+	alert("报名请直拨电话："+mobile+",谢谢！");
+}
+</script>
+</head>
+<body>
+	<div class="container">
+	
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	<script>
+		currentMenu("tuangou");
+	</script>
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/" >{$com.abbreviation}</a> &gt; 
+		<a href="__APP__/tuangou/index" >{$com.cityName}一手楼团购</a>
+	</div>
+	
+	<div id="index_content">
+		
+		
+			<div class="main-item t-view">
+				<h1 class="width930"><span class="red">{$product.communityName}：</span>{$product.productName}</h1>
+				<div class="item_block">
+					
+					<div class="item_block_l_wiew">
+						<div class="block_lt">
+							<div class="block_a_view">
+								<ul>
+									<li><p class="tit">原价<span class="f-size12">/㎡</span></p><p class="tit_num">￥<del>{$product.originalPrice|number_format=0,',',''}</del></p></li>
+									<li class="vline"></li>
+									<li><p  class="tit">团购价<span class="f-size12">/㎡</span></p><p class="tit_num red"><strong>￥{$product.totalPrice|number_format=0,',',''}</strong></p></li>
+									<li  class="vline"></li>
+									<li><p  class="tit">折扣</p><p class="tit_num">{$product['totalPrice']/$product['originalPrice']*10|number_format=1,'.',','}</p></li>
+								</ul>
+							</div>
+							
+							<ul class="ul_view">
+								<li class="l-text"><strong>{$product.recommendation}</strong></li>
+								<if condition="$tuan['end'] gt 1 ">
+									<li><a href="javascript:apply();"><img src="__APP____PUBLIC__/images/tuan-qianggou.gif" width="42" height="139"/></a></li>
+								<else/>
+									<li><a href="javascript:alert('本期团购已结束，请关注其它团购');"><img src="__APP____PUBLIC__/images/tuan-end.gif" width="139" height="42" alt="团购结束 - {$com.abbreviation}"/></a></li>
+								</if>
+							</ul>
+							
+						</div>
+					
+						<div class="block_b margin10">
+							<p class="text-c f-size15 fontbold mainColor">已有<span class="red f-size18">{$product.applyNum|number_format=0,',',''}</span>人报名</p>
+							<p class="text-c f-size15 fontbold mainColor time">团购日期：<span class="f-size18">{$product.startDate}</span><span class="marlr5">至</span><span class="f-size18">{$product.endDate}</span></p>
+							<p class="text-c f-size18 fontbold mainColor">报名截止时间：<span class="red">{$product.applyEndTime|date='Y-m-d',###}</span></p>
+							<div class="prop_tel_long mat10"><span class="tel-text-view mat9 navColor">{$agent.mobile}</span></div>
+						</div>
+							
+						<div class="block_b margin10">
+							<p class="line-height21">楼盘名称：{$product.communityName}</p>
+							<p class="line-height21">楼盘地址：{$product.address}</p>
+							<p class="line-height21">楼盘开发商：{$product.develop}</p>
+						</div>
+						
+					</div>
+					<div class="item_block_r_view">
+					<foreach name='picList' item="pic" key="i">
+						<if condition="$i lt 1">
+						<img src="__APP__{$pic.bigPicUrl}" alt="{$pic.title}" width="565" height="372"/>
+						</if>
+					</foreach>	
+						
+					</div>
+					
+					
+				</div><!-- 结束报名及图片 -->
+				
+				<div>
+				
+				<div id="filter">
+					<ul class="tabbar-tuan">
+					<li class="selected-tuan"><h3 class="tuan-prop-intro"><a href="#prop_title">楼盘介绍</a></h3></li>
+					</ul>
+				</div>
+				
+				<div class="prop_desc">
+					<strong>{$product.recommendation}</strong>
+					{$product.description}
+					
+					<span id="pic"><br/></span>
+					
+						<center class="img780">
+							
+							<foreach name='picList' item="pic">
+								<img src="__APP__{$pic.bigPicUrl}" alt="{$product.productName}" /><br>
+								<p class="imgfont">{$pic.title}</p><br>
+							</foreach>
+							
+						</center>
+					
+				</div>
+				<div class="prop_tel"><h3>{$agent.mobile} {$agent.nickName}</h3></div>
+				
+				<div class="house-around">
+					<dl>
+								
+						<notempty  name="product.subway"><dd><label>地铁：</label>{$product.subway}</dd></notempty>
+						<notempty  name="product.bus"><dd><label>公交：</label>{$product.bus}</dd></notempty>
+						<notempty  name="product.transportHub"><dd><label>临近交通枢纽：</label>{$product.transportHub}</dd></notempty>
+						<notempty  name="product.school"><dd><label>学校：</label>{$product.school}</dd></notempty>
+						<notempty  name="product.kindergarten"><dd><label>幼儿园：</label>{$product.kindergarten}</dd></notempty>
+						<notempty  name="product.shopping"><dd><label>商场：</label>{$product.shopping}</dd></notempty>
+						<notempty  name="product.hospital"><dd><label>医院：</label>{$product.hospital}</dd></notempty>
+						<notempty  name="product.bank"><dd><label>银行：</label>{$product.bank}</dd></notempty>
+						<notempty  name="product.post"><dd><label>邮局：</label>{$product.post}</dd></notempty>
+						<notempty  name="product.dining"><dd><label>餐饮：</label>{$product.dining}</dd></notempty>
+						<notempty  name="product.businessCenter"><dd><label>临近商业中心：</label>{$product.businessCenter}</dd></notempty>
+						<notempty  name="product.ortherFacility"><dd><label>其它：</label>{$product.ortherFacility}</dd></notempty>
+					</dl>
+				</div>
+									
+				</div>
+			</div><!-- 结束信息框 -->
+			
+			
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

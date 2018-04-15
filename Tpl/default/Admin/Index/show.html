@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+
+	<link rel="stylesheet" type="text/css" href="/Public/css/admin/style.css" />
+</head>
+
+<body>
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('m_index');
+				</script>
+				
+				<div class="right_area">
+					<div class="ccbox">
+						<h3>网站基本信息</h3>
+					  	<div class="cc-m topinfo_meg cf">
+					 		<p> <a href="/productadminister/ProductAdminister/product.htm">您的网站空间到期日：</a><strong>2013-2-28</strong></p>
+					 		<p> <a href="/productadminister/ProductAdminister/product.htm">网您的域名到期日：</a><strong>2013-5-1</strong></p>
+					 		<p> <a href="/productadminister/ProductAdminister/product.htm">网站世界排名alexa：</a><strong>5401</strong></p>
+					 		<p><a href="/comment/comment/commentManage.htm">google PR：</a><strong>6</strong></p>
+					 		<p><script src="http://s84.cnzz.com/stat.php?id=4633883&web_id=4633883&online=1&show=line" language="JavaScript"></script></p>
+					 	</div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

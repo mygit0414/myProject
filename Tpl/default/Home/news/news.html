@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$news.title}房产新闻 - 房产资讯  | {$com.abbreviation}</title>
+<meta name="keywords" content="">
+<meta name="description" content="{$page_description|msubstr=0,150,'utf-8',false}">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+
+
+</head>
+<body>
+	<div class="container">
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	<eq name="type" value="1" >
+		<script>
+			currentMenu("new");
+		</script>
+	</eq>
+	
+	<eq name="type" value="2" >
+		<script>
+			currentMenu("second");
+		</script>
+	</eq>
+	
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/">{$com.abbreviation}</a> &gt; 
+		<a href="__APP__/news/index" >{$com.cityName}房产资讯</a> &gt; 
+		资讯详情
+	</div>
+
+	<div id="index_content">
+		<div id="contentL" class="fl">				
+			
+			<div id="news_box" class="h-box">
+				<h1>{$news.title}</h1>
+				<p class="date">{$news.createDate}</p>
+				<div id="news_content">
+					{$news.content}
+				</div>
+			</div>
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

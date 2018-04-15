@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script src="/Public/js/jquery-1.4.4.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	<!--在线编辑器引用-->
+	<script type="text/javascript" src="/Public/js/ckeditor/ckeditor.js"></script>
+	<!--在线编辑器引用-->
+	
+	<script>
+		var longitude = "{$com.longitude}";//默认显示经度
+		var latitude = "{$com.latitude}";//默认显示纬度
+		var mapTitle = "{$com.abbreviation}";//地图层显示的文字
+		
+		function loadScript() {
+			var script = document.createElement("script");
+			script.src = "http://api.map.baidu.com/api?v=1.2&callback=initialize";
+			document.body.appendChild(script);
+		}
+		
+		$(document).ready(function(){
+			$.formValidator.initConfig({formID:"form1",autoTip:true,tidyMode:true,onError:function(msg){}});
+			$("#productName").formValidator({onShow:"请输入标题",onFocus:"请输入标题",onCorrect:"输入正确"}).inputValidator({min:1,max:150,onError:"输入错误，请输入1~150个字!"});
+			$("#totalPrice").formValidator({empty:true,onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			$("#rentText").formValidator({empty:true,onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			$("#area").formValidator({onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			//$("input:radio[name=dipiType]").formValidator({onshow:"请选择你的兴趣爱好（至少选一个）",onfocus:"你至少选择1个",oncorrect:"恭喜你,你选对了"}).InputValidator({min:1,onerror:"你选的个数不对"});
+			//$("input:radio[name=dipiType]").formValidator({tipid:"dipiTypeTip",onshow:"请选择你的性别",onfocus:"没有第三种性别了，你选一个吧",oncorrect:"输入正确",defaultvalue:"2"}).InputValidator({min:1,max:1,onerror:"性别忘记选了,请确认"}).DefaultPassed();
+			//$("#test3").formValidator({onshow:"请选择你的兴趣爱好（至少选一个）",onfocus:"你至少选择1个",oncorrect:"恭喜你,你选对了"}).InputValidator({min:1,onerror:"你选的个数不对"});
+			
+			//$("#propertyRightArea").formValidator({empty:true,onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"num1",dataType:"enum",onError:"正数格式不正确"});
+			//$("#houseAge").formValidator({empty:true,onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"num1",dataType:"enum",onError:"正数格式不正确"});
+			//$("#districtID").formValidator({onShow:"选择物业所在区域",onFocus:"物业区域必须选择",onCorrect:"已选择"}).inputValidator({min:1,onError: "物业区域必须选择!"}).defaultPassed();
+			//$("#type").formValidator({onShow:"选择物业类型",onFocus:"物业类型必须选择",onCorrect:"已选择"}).inputValidator({min:1,onError: "物业类型必须选择!"}).defaultPassed();
+			$("#address").formValidator({empty:true,onShow:"请输入",onFocus:"请输入",onCorrect:"输入正确"}).inputValidator({min:1,max:50,onError:"输入错误，请输入1~50个字!"})
+			$("#communityName").formValidator({empty:true,onShow:"请输入",onFocus:"请输入",onCorrect:"输入正确"}).inputValidator({max:50,onError: "输入错误，最多可输入50个字!"})
+			//$("#description").formValidator({onShow:"请输入房源介绍",onFocus:"请输入房源介绍",onCorrect:"输入正确"}).inputValidator({min:1,max:50,onError: "输入错误，请输入1~5000个字!"})
+		});
+		
+	</script>
+</head>
+
+<body onLoad="loadScript();">
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+				
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('p_dipi');
+				</script>
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li><a href="index">地皮/厂房/仓库查询</a></li>
+			    			<li class="cbar-tag-sel">增加地皮/厂房/仓库</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">增加地皮/厂房/仓库</div>
+    		</div>	
+       		
+       		<form id="form1" name="form1" method="post" action="__URL__/insert" enctype="multipart/form-data">
+		       <input type="hidden" name="longitude" id="longitude" value="{$com.longitude}" />
+		       <input type="hidden" name="latitude" id="latitude" value="{$com.latitude}" />
+		    <table cellspacing="0" cellpadding="0" border="0" class="table-f">
+		      <tbody>
+		        				
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">标题：</td>
+		        <td align="left" colspan="3"><input type="text" id="productName" size="60" name="productName" class="fl">
+		        <div id="productNameTip" class="onShow tips" style="width:200px;">请输入标题</div></td>
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl" width="12%">物业类型：</td>
+		        <td width="38%">
+		        	<select name="type">
+		        		<option value="6" >厂房</option>
+		        		<option value="7" >地皮</option>
+		        		<option value="8" >仓库</option>
+		        		<option value="10">其它</option>
+		        	</select>
+		        </td>
+		        <td align="right"  width="12%"></td>
+		        <td>
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl" width="12%">类型：</td>
+		        <td width="38%">
+		        	<span class="mrl10"><input type="radio" name="saleType" value="2" checked>出售</span>
+		        	<span class="mrl10"><input type="radio" name="saleType" value="1" >出租</span>
+		        </td>
+		        <td align="right"  width="12%"></td>
+		        <td>
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl" width="12%">租金/每月：</td>
+		        <td width="38%"><input type="text" id="rentText" size="10" name="rent" class="fl"><div id="rentTextTip" class="tips" style="width:140px;">请输入租金</div></td>
+		        <td align="right"  width="12%"></td>
+		        <td>
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl" width="12%">售价(万元)：</td>
+		        <td width="38%"><input type="text" id="totalPrice" size="10" name="totalPrice" class="fl"><div id="totalPriceTip" class="tips" style="width:140px;">请输入出售价格</div></td>
+		        <td align="right"  width="12%"></td>
+		        <td>
+					
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl">面积：</td>
+		        <td><input type="text" id="area" size="10" name="area" class="fl"><div id="areaTip" class="onShow tips" style="width:140px;">请输入面积</div></td>
+		        <td align="right"></td>
+		        <td>
+		        <div id="districtIDTip" class="onShow tips" style="width:150px;"></div></td>
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">土地类型：</td>
+		        <td align="left" colspan="3">
+		        	<foreach name='landTypeArr' item="landType">
+		        		<input type="radio" value="{$landType}" name="dipiType" />{$key} &nbsp&nbsp
+					</foreach>
+		        </td>
+		        
+		      </tr>  
+		     
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">地址：</td>
+		        <td align="left" colspan="3"><input type="text" id="address" size="50" name="address" class="fl">
+		        <div id="addressTip" class="onShow tips" style="width:200px;">请输入</div></td>
+		      </tr>
+		      
+		    </tbody></table>
+		    <div class="ydbar">
+		      <div class="info-title">地皮/厂房/仓库介绍</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        <td><textarea class="ckeditor" name="description" cols="50" rows="10" id="description" ></textarea>
+		        <div id="descriptionTip" class="onShow tips" style="width:200px;">请输入地皮/厂房/仓库介绍</div></td>
+		      </tr>
+		   		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">推荐说明</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        
+		        <td align="left" colspan="4"><input type="text" id="recommendation" size="100" name="recommendation" class="fl">
+		        <div id="recommendationTip" class="onShow tips" style="width:200px;">请最多输入50个字</div></td>
+		      </tr>
+		   		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">图片</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody>
+		      	<tr>
+		        	<td>
+		        		<input type="button" onclick="addFileUpload();" value="添加图片" />
+        <br />			<span id="files">
+		        			<div id="fileDiv0">图片名称&nbsp;<input type="text" name="fileName[]">&nbsp;<input type="file" name="file[]"><a href="javascript:void(delFile('fileDiv0'));">删除</a></a><br></div>
+		        		</span>
+		        		</td>
+		      	</tr>
+
+		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">地图标注</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        
+		        <td><div id="container" class="maps"></div>
+		        </td>
+		      </tr>
+
+		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">周边配套信息</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table-f">
+		      <tbody> 
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">地铁：</td>
+		        <td align="left" colspan="2"><input type="text" id="subway" size="50" name="subway"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">公交：</td>
+		        <td align="left" colspan="2"><input type="text" id="bus" size="50" name="bus"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">临近交通枢纽：</td>
+		        <td align="left" colspan="2"><input type="text" id="transportHub" size="50" name="transportHub"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">学校：</td>
+		        <td align="left" colspan="2"><input type="text" id="school" size="50" name="school"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">幼儿园：</td>
+		        <td align="left" colspan="2"><input type="text" id="kindergarten" size="50" name="kindergarten"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">商场：</td>
+		        <td align="left" colspan="2"><input type="text" id="shopping" size="50" name="shopping"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">医院：</td>
+		        <td align="left" colspan="2"><input type="text" id="hospital" size="50" name="hospital"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">银行：</td>
+		        <td align="left" colspan="2"><input type="text" id="bank" size="50" name="bank"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">邮局：</td>
+		        <td align="left" colspan="2"><input type="text" id="post" size="50" name="post"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">餐饮：</td>
+		        <td align="left" colspan="2"><input type="text" id="dining" size="50" name="dining"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		       <tr>
+		        <td align="right" width="12%" class="formtdl">临近商业中心：</td>
+		        <td align="left" colspan="2"><input type="text" id="businessCenter" size="50" name="businessCenter"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		       <tr>
+		        <td align="right" width="12%" class="formtdl">其它：</td>
+		        <td align="left" colspan="2"><input type="text" id="ortherFacility" size="50" name="ortherFacility"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		     
+		    </tbody></table>
+    
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		          <td align="center">
+		            <input type="submit" value="确定" id="button" class="inp-yd" name="button">
+		            
+		        </td></tr>
+		    </tbody></table>
+		  </form>
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

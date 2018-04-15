@@ -1,0 +1,16 @@
+<div id="headNav">
+	<div id="hnav_content">
+		<span>{$com.headTip}</span><notempty name="com.tel"><span>欢迎拨打房源热线：</span><span class="tel">{$com.tel}</span></notempty>
+		
+		<ul>
+			<li> <a onClick="SetHomepage(window.location)" title="将{$com.abbreviation}网设为首页" href="javascript::void(0);">设为首页</a></li>
+			<li><a onClick="AddFavorite(window.location,document.title)" title="加入收藏" href="javascript:void(0);">加入收藏夹</a></li>
+		</ul>
+	</div>
+</div><!-- headNav end -->
+
+<div id="head_box">
+	<span id="logo"><a href="__APP__/"><img src="__APP__{$com.logo}" width="180" height="80" alt="{$com.abbreviation} - {$com.cityName}二手房,{$com.cityName}新楼盘,{$com.cityName}租房" /></a></span>
+	<span id="address">{$com.cityName}</span>
+	<span id="ad"><a href="{$banner.link}" target="_blank"><img src="__APP__{$banner.path}" alt="{$banner.name}" width="680" height="80"/></a></span>
+</div><!-- head_box end-->

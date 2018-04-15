@@ -1,0 +1,467 @@
+[ 2018-04-15T09:05:40+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:05:40+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:05:41+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:05:41+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.012001s ]
+[ 2018-04-15T09:05:41+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:05:41+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:05:41+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:05:41+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:05:41+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.003000s ]
+[ 2018-04-15T09:05:41+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:05:48+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:05:48+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:05:48+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:05:48+08:00 ] SQL: SHOW COLUMNS FROM `agent` [ RunTime:0.004000s ]
+[ 2018-04-15T09:05:48+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:05:48+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:05:48+08:00 ] SQL: SELECT * FROM `agent` WHERE ( `loginName` = 'admin' ) AND ( `state` = '1' ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:05:48+08:00 ] NOTIC: [8] Undefined index: PersistentCookie LoginAction.class.php 第 55 行.
+[ 2018-04-15T09:05:49+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:05:49+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:05:49+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:05:49+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:05:49+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:35+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:35+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:35+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:35+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:35+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:37+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.005001s ]
+[ 2018-04-15T09:07:37+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.002000s ]
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:37+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:37+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:37+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:37+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:37+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:40+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:40+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:40+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:40+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:40+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:47+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:47+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:47+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.004001s ]
+[ 2018-04-15T09:07:47+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:07:47+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.005000s ]
+[ 2018-04-15T09:07:47+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:07:47+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.002000s ]
+[ 2018-04-15T09:07:47+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:51+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:07:51+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:07:51+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:07:51+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:51+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:07:51+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.000000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.003000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.004000s ]
+[ 2018-04-15T09:07:51+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:08:40+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:08:40+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:08:40+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:08:40+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.003000s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.004000s ]
+[ 2018-04-15T09:08:40+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:08:40+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.004000s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.004001s ]
+[ 2018-04-15T09:08:40+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.002000s ]
+[ 2018-04-15T09:08:42+08:00 ] ERR: (ThinkException) 模板不存在[/Tpl/default/Home/error.html]
+[ 2018-04-15T09:09:08+08:00 ] ERR: (ThinkException) 模板不存在[/Tpl/default/Home/error.html]
+[ 2018-04-15T09:09:32+08:00 ] ERR: (ThinkException) 模板不存在[/Tpl/default/Home/error.html]
+[ 2018-04-15T09:10:48+08:00 ] ERR: (ThinkException) 模板不存在[/Tpl/default/Home/error.html]
+[ 2018-04-15T09:11:47+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:11:47+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:11:47+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:11:47+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:11:47+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:11:47+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.005000s ]
+[ 2018-04-15T09:11:47+08:00 ] NOTIC: [8] Undefined index: id AdminBaseAction.class.php 第 40 行.
+[ 2018-04-15T09:11:47+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:11:47+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:29+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:12:29+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:12:29+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:12:29+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.004001s ]
+[ 2018-04-15T09:12:29+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:12:31+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.002000s ]
+[ 2018-04-15T09:12:31+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:31+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.003000s ]
+[ 2018-04-15T09:12:31+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:12:31+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.004001s ]
+[ 2018-04-15T09:12:31+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:12:31+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.002000s ]
+[ 2018-04-15T09:12:31+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:33+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:12:33+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:12:33+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:12:33+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.005000s ]
+[ 2018-04-15T09:12:33+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:12:33+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.004000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.003000s ]
+[ 2018-04-15T09:12:33+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:38+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:12:38+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:12:38+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:12:38+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:38+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:12:38+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.005001s ]
+[ 2018-04-15T09:12:38+08:00 ] NOTIC: [8] Undefined index: id AdminBaseAction.class.php 第 40 行.
+[ 2018-04-15T09:12:38+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:12:38+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:13+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:13+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:13+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.003000s ]
+[ 2018-04-15T09:13:13+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:13:13+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.004000s ]
+[ 2018-04-15T09:13:13+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:13:13+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.003001s ]
+[ 2018-04-15T09:13:13+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:16+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:16+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:16+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:17+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.005000s ]
+[ 2018-04-15T09:13:17+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:17+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.003000s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.003001s ]
+[ 2018-04-15T09:13:17+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:20+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:20+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:20+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:20+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:20+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:20+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.004000s ]
+[ 2018-04-15T09:13:20+08:00 ] NOTIC: [8] Undefined index: id AdminBaseAction.class.php 第 40 行.
+[ 2018-04-15T09:13:20+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:20+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:42+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:42+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:42+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:42+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:13:42+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.003000s ]
+[ 2018-04-15T09:13:42+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:13:42+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.002001s ]
+[ 2018-04-15T09:13:42+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:46+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:46+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:46+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:47+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:47+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:47+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001001s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:47+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:50+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001001s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: id AdminBaseAction.class.php 第 40 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:50+08:00 ] SQL: UPDATE `product` SET `productName`='佛罗伦斯尚苑2房向南向江',`totalPrice`='44',`houseType`='5',`unitPrice`='5700',`area`='76',`useArea`='86',`propertyRightArea`='76',`houseAge`='2010',`address`='容桂大道东',`districtID`='1',`communityName`='佛罗伦斯尚苑',`floor`='5',`direction`='3',`decoration`='1',`description`='<p>\r\n	<span style=\"font-size: 16px\">佛罗伦斯，毗邻广珠轻轨&ldquo;容桂站&rdquo;，是真正的&ldquo;轻轨口岸物业&rdquo;，轻轨通车后，容桂去广州仅6分钟，半小时可到达珠三角所有城市，轻松拥入&ldquo;珠三角1小时城市生活圈&rdquo;，优雅收藏物业升值与珠三角繁华生活。珠三角9座城市实现无缝连接，两座城市之间均不超过40分钟车程</span></p>\r\n',`subway`='',`bus`='',`transportHub`='',`school`='',`kindergarten`='',`shopping`='',`hospital`='',`bank`='',`post`='',`dining`='',`businessCenter`='',`ortherFacility`='',`longitude`='113.327208',`latitude`='22.751272',`type`='2',`develop`='',`recommendation`='容桂新城区，轻轨附近' WHERE ( `id` = '123' ) [ RunTime:0.194011s ]
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:50+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001001s ]
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:13:50+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:50+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:13:50+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:50+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:58+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:13:58+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:13:58+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:13:58+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:13:58+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:13:58+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001001s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.003000s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.003000s ]
+[ 2018-04-15T09:13:58+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:14:04+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: id AdminBaseAction.class.php 第 40 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.003000s ]
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:04+08:00 ] SQL: UPDATE `product` SET `productName`='佛罗伦斯尚苑2房向南向江1',`totalPrice`='44',`houseType`='5',`unitPrice`='5700',`area`='76',`useArea`='86',`propertyRightArea`='76',`houseAge`='2010',`address`='容桂大道东',`districtID`='1',`communityName`='佛罗伦斯尚苑',`floor`='5',`direction`='3',`decoration`='1',`description`='<p>\r\n	<span style=\"font-size: 16px\">佛罗伦斯，毗邻广珠轻轨&ldquo;容桂站&rdquo;，是真正的&ldquo;轻轨口岸物业&rdquo;，轻轨通车后，容桂去广州仅6分钟，半小时可到达珠三角所有城市，轻松拥入&ldquo;珠三角1小时城市生活圈&rdquo;，优雅收藏物业升值与珠三角繁华生活。珠三角9座城市实现无缝连接，两座城市之间均不超过40分钟车程</span></p>\r\n',`subway`='',`bus`='',`transportHub`='',`school`='',`kindergarten`='',`shopping`='',`hospital`='',`bank`='',`post`='',`dining`='',`businessCenter`='',`ortherFacility`='',`longitude`='113.327208',`latitude`='22.751272',`type`='2',`develop`='',`recommendation`='容桂新城区，轻轨附近' WHERE ( `id` = '123' ) [ RunTime:0.235013s ]
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:14:04+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.003000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:14:04+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:04+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:14:04+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:04+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:08+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:14:08+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:14:08+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:14:08+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:08+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:08+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.004000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.003000s ]
+[ 2018-04-15T09:14:08+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:14:46+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: id AdminBaseAction.class.php 第 40 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.003000s ]
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:46+08:00 ] SQL: UPDATE `product` SET `productName`='佛罗伦斯尚苑2房向南向江1',`totalPrice`='441',`houseType`='3',`unitPrice`='57001',`area`='761',`useArea`='861',`propertyRightArea`='761',`houseAge`='2010',`address`='容桂大道东1',`districtID`='4',`communityName`='佛罗伦斯尚苑1',`floor`='51',`direction`='6',`decoration`='3',`description`='<p>\r\n	<span style=\"font-size: 16px\">佛罗伦斯，毗邻广珠轻轨&ldquo;容桂站&rdquo;，是真正的&ldquo;轻轨口岸物业&rdquo;，轻轨通车后，容桂去广州仅6分钟，半小时可到达珠三角所有城市，轻松拥入&ldquo;珠三角1小时城市生活圈&rdquo;，优雅收藏物业升值与珠三角繁华生活。珠三角9座城市实现无缝连接，两座城市之间均不超过40分钟车程222</span></p>\r\n',`subway`='1',`bus`='1',`transportHub`='1',`school`='1',`kindergarten`='1',`shopping`='1',`hospital`='1',`bank`='1',`post`='1',`dining`='1',`businessCenter`='1',`ortherFacility`='1',`longitude`='113.327208',`latitude`='22.751272',`type`='1',`develop`='1111',`recommendation`='容桂新城区，轻轨附近' WHERE ( `id` = '123' ) [ RunTime:0.145009s ]
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:14:46+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.003000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.004000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.001001s ]
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 64 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 69 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 72 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 75 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: useArea HouseAction.class.php 第 80 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: productName HouseAction.class.php 第 81 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: totalPrice HouseAction.class.php 第 82 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: houseType HouseAction.class.php 第 83 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: type HouseAction.class.php 第 84 行.
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: districtID HouseAction.class.php 第 85 行.
+[ 2018-04-15T09:14:46+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.004000s ]
+[ 2018-04-15T09:14:46+08:00 ] NOTIC: [8] Undefined index: p HouseAction.class.php 第 90 行.
+[ 2018-04-15T09:14:46+08:00 ] SQL: SELECT * FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) ORDER BY sort desc,id desc LIMIT 0,15  [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:46+08:00 ] SQL: SELECT COUNT(*) AS tp_count FROM `product` WHERE ( `state` = 1 ) AND ( (`type` = 1) OR (`type` = 2) ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:50+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead Dispatcher.class.php 第 102 行.
+[ 2018-04-15T09:14:50+08:00 ] NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead functions.php 第 145 行.
+[ 2018-04-15T09:14:50+08:00 ] NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead DbMysql.class.php 第 62 行.
+[ 2018-04-15T09:14:50+08:00 ] SQL: SHOW COLUMNS FROM `company` [ RunTime:0.002000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SHOW COLUMNS FROM `product` [ RunTime:0.002001s ]
+[ 2018-04-15T09:14:50+08:00 ] NOTIC: [8192] mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead. DbMysql.class.php 第 403 行.
+[ 2018-04-15T09:14:50+08:00 ] SQL: SELECT * FROM `product` WHERE ( `id` = '123' ) [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SHOW COLUMNS FROM `district` [ RunTime:0.001000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SELECT * FROM `district` WHERE state=1 [ RunTime:0.000000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SELECT * FROM `company` WHERE ( `id` = 1 ) LIMIT 1  [ RunTime:0.000000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SHOW COLUMNS FROM `picture` [ RunTime:0.003000s ]
+[ 2018-04-15T09:14:50+08:00 ] SQL: SELECT * FROM `picture` WHERE productID=123 and state=1 and type=1 [ RunTime:0.001000s ]

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+</head>
+
+<body>
+	
+		<div id="headNav">
+			<div id="hnav_content">
+				
+				<span id="login">欢迎您：xxx [退出]</span>
+				<div class="clear"></div>	
+			</div>
+		</div><!-- headNav end-->
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+			
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('m_agent');
+				</script>
+				
+					
+					<div class="right_area">
+						<div style="font-size:16pt; color:red;"><center>{$message} <empty name="status"><a href="javascript:history.go(-1)">返回</a></empty><!-- 0使用empty判断为true --></center></div>
+					</div><!-- right_area end -->
+			
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			
+   		</div><!-- wrapper end-->
+
+<div id="footer"></div>
+</body>
+</html>

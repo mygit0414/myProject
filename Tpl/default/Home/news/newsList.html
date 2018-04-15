@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$com.cityName}房产新闻_{$com.cityName}房产资讯  - {$com.abbreviation}</title>
+<meta name="keywords" content="">
+<meta name="description" content="{$com.cityName}房地产资讯频道，为您提供最新{$com.cityName}房地产行业新闻、{$com.cityName}房价走势、提供新房、二手房、商铺，地皮等地产资讯，为广大准备在{$com.cityName}买房的朋友提供最贴心的置业指南.">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script>
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+
+</head>
+<body>
+	<div class="container">
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	<eq name="type" value="1" >
+		<script>
+			currentMenu("new");
+		</script>
+	</eq>
+	
+	<eq name="type" value="2" >
+		<script>
+			currentMenu("second");
+		</script>
+	</eq>
+	
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/">{$com.abbreviation}</a> &gt; 
+		<a href="__APP__" >{$com.cityName}房产资讯</a>
+	</div>
+
+	<div id="index_content">
+		<div id="contentL" class="fl">
+			<!-- <div class="h-box"><a href="__APP__#" target="_blank"><img src="__APP____PUBLIC__/images/test/44994659_07_112634.jpg" width=700 height=80/></a></div> -->
+				
+			
+			<div class="h-box">
+				<div class="ht"><h1>{$com.cityName}房产资讯</h1></div>
+				
+				<div id="news_list">
+					<ul>
+				<foreach name='newsList' item="news">
+						<li>
+							<div class="title"><a href="__APP__/news/{$news.id}.html" target="_blank">{$news.title}</a> </div><div class="date">{$news.createDate}</div>
+						</li>
+				</foreach>
+					</ul>
+				</div>
+				<div class="page">{$page}</div>
+			</div>
+		</div>
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script src="/Public/js/jquery-1.4.4.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+	<!--在线编辑器引用-->
+	<script type="text/javascript" src="/Public/js/ckeditor/ckeditor.js"></script>
+	<!--在线编辑器引用-->
+	
+	<script>
+		var longitude = {$vo.longitude};//默认显示经度
+		var latitude = {$vo.latitude};//默认显示纬度
+		var mapTitle = "{$vo.productName}";//地图层显示的文字
+		
+		function loadScript() {
+			var script = document.createElement("script");
+			script.src = "http://api.map.baidu.com/api?v=1.2&callback=initialize";
+			document.body.appendChild(script);
+		}
+
+		function recommendationPic(id,obj){
+			if(id==null || id==""){
+				alert("设置推荐图错误！");return false;
+			}
+			
+			if(obj==null){
+				alert("设置推荐图错误！");return false;
+			}
+
+			var flag = "";
+			if(obj.checked){
+				flag = 1;
+			}
+
+			$.ajax({
+			  url: '/Admin/house/recommendationPic',
+			  data: {'id': id,'flag':flag},
+			  success: function(data) {
+			   	if(data!="success"){
+				   	alert("推荐失败");
+			   	}
+			  }
+			});
+			
+		}
+		
+		$(document).ready(function(){
+			$.formValidator.initConfig({formID:"form1",autoTip:true,tidyMode:true,onError:function(msg){}});
+			$("#productName").formValidator({onShow:"请输入房源名称",onFocus:"请输入房源名称",onCorrect:"输入正确"}).inputValidator({min:1,max:150,onError:"输入错误，请输入1~150个字!"});
+			$("#rentText").formValidator({onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			$("#area").formValidator({onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			$("#propertyRightArea").formValidator({empty:true,onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			$("#houseAge").formValidator({empty:true,onShow:"请输入正数",onFocus:"请输入正数",onCorrect:"输入正确"}).regexValidator({regExp:"intege1",dataType:"enum",onError:"正数格式不正确"});
+			$("#districtID").formValidator({onShow:"选择物业所在区域",onFocus:"物业区域必须选择",onCorrect:"已选择"}).inputValidator({min:1,onError: "物业区域必须选择!"}).defaultPassed();
+			//$("#type").formValidator({onShow:"选择物业类型",onFocus:"物业类型必须选择",onCorrect:"已选择"}).inputValidator({min:1,onError: "物业类型必须选择!"}).defaultPassed();
+			$("#address").formValidator({empty:true,onShow:"请输入",onFocus:"请输入",onCorrect:"输入正确"}).inputValidator({min:1,max:150,onError:"输入错误，请输入1~150个字!"})
+			$("#communityName").formValidator({empty:true,onShow:"请输入",onFocus:"请输入",onCorrect:"输入正确"}).inputValidator({max:50,onError: "输入错误，最多可输入50个字!"})
+			//$("#description").formValidator({onShow:"请输入房源介绍",onFocus:"请输入房源介绍",onCorrect:"输入正确"}).inputValidator({min:1,max:50,onError: "输入错误，请输入1~5000个字!"})
+		});
+		
+	</script>
+</head>
+
+<body onLoad="loadScript();">
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+				
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('rent');
+				</script>
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li><a href="index">房源查询</a></li>
+			    			<li class="cbar-tag-sel">增加房源</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">增加房源</div>
+    		</div>	
+       		
+       		<form id="form1" name="form1" method="post" action="__URL__/update" enctype="multipart/form-data">
+       		   <input type="hidden" name="id" id="id" value="{$vo.id}" />
+		       <input type="hidden" name="longitude" id="longitude" value="{$vo.longitude}" />
+		       <input type="hidden" name="latitude" id="latitude" value="{$vo.latitude}" />
+		    <table cellspacing="0" cellpadding="0" border="0" class="table-f">
+		      <tbody>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">房源名称：</td>
+		        <td align="left" colspan="3"><input type="text" id="productName" size="60" name="productName" value="{$vo.productName}" class="fl">
+		        <div id="productNameTip" class="onShow tips" style="width:200px;">请输入产品名称</div></td>
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl" width="12%">租金/每月：</td>
+		        <td width="38%"><input type="text" id="rentText" size="10" name="rent" value="{$vo.rent|number_format=0,',',''}" class="fl"><div id="rentTextTip" class="tips" style="width:140px;">请输入租金</div></td>
+		        <td align="right" class="formtdl" width="12%">押金</td>
+		        <td><select name="depositType" id="depositType" class="fl">    
+		        		<option value=-1 selected>请选择</option>
+		        		 <foreach name='depositTypeArr' item="depositType">
+		        		 	<option value="{$depositType}" <eq name="vo['depositType']" value="$depositType" >selected=selected</eq> >{$key}</option>
+					     </foreach>
+					</select>
+					
+		      </tr>
+		      
+		      <tr>
+		        <td align="right" class="formtdl">房型：</td>
+		        <td>
+		        	<select name="houseType" id="houseType"  class="fl">    
+		        		<option value=-1 selected>请选择</option>
+		        		 <foreach name='houseTypeArr' item="houseType">
+		        		 	<option value="{$houseType}" <eq name="vo['houseType']" value="$houseType" >selected=selected</eq> >{$key}</option>
+					     </foreach>
+					</select>
+					
+		        </td>
+		       <td align="right" class="formtdl">装修：</td>
+		        <td>
+		        		<select name="decoration" id="decoration" class="fl">    
+			        		<option value=-1 selected>请选择</option>
+			        		 <foreach name='decorationArr' item="decoration">
+			        		 	<option value="{$decoration}" <eq name="vo['decoration']" value="$decoration" >selected=selected</eq> >{$key}</option>
+						     </foreach>
+						</select>
+				</td>
+		      </tr>		      
+		      
+		      <tr>
+		        <td align="right" class="formtdl">面积：</td>
+		        <td><input type="text" id="area" size="10" name="area" value="{$vo.area|number_format=0,',',''}" class="fl"><div id="areaTip" class="onShow tips" style="width:140px;">请输入面积</div></td>
+		        <td align="right" class="formtdl">区域：</td>
+		        <td><select name="districtID" id="districtID" class="fl">
+		        		<option value=-1>请选择</option>
+		        		<volist name="distList" id="dist">
+		        			<option value="{$dist.id}" <eq name="dist['id']" value="$vo.districtID" >selected=selected</eq> >{$dist.name}</option>
+		        		</volist>
+		        	</select>
+		        	
+		        <div id="districtIDTip" class="onShow tips" style="width:150px;">请选择</div></td>
+		      </tr>
+		      	     
+		     
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">地址：</td>
+		        <td align="left" colspan="3"><input type="text" id="address" size="50" name="address" value="{$vo.address}" class="fl">
+		        <div id="addressTip" class="onShow tips" style="width:200px;">请输入</div></td>
+		      </tr>
+		       <tr>
+		        <td align="right" width="12%" class="formtdl">小区：</td>
+		        <td align="left" colspan="3"><input type="text" id="communityName" size="50" name="communityName" value="{$vo.communityName}"  class="fl">
+		        	<div id="communityNameTip" class="onShow tips" style="width:200px;">请输入小区名称</div></td>
+		      </tr>
+		      
+		    </tbody></table>
+		    <div class="ydbar">
+		      <div class="info-title">房源介绍</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        <td><textarea class="ckeditor" name="description" cols="50" rows="10" id="description" >{$vo.description}</textarea>
+		        <div id="descriptionTip" class="onShow tips" style="width:200px;">请输入房源介绍</div></td>
+		      </tr>
+		   		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">推荐说明</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        
+		        <td align="left" colspan="4"><input type="text" id="recommendation" size="100" name="recommendation" value="{$vo.recommendation}" class="fl">
+		        <div id="recommendationTip" class="onShow tips" style="width:200px;">请最多输入50个字</div></td>
+		      </tr>
+		   		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">房源图片</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		    	
+		      <tbody>
+		        <tr><td>
+		        	<input type="hidden" name="delPicID" id="delPicID" value="" />
+		        	<volist name="picList" id="pic">
+		        		<div class="pro_picList" id="pic{$pic['id']}">
+		        			<img src="{$pic['thumb']}" width="100" height="100"/>
+		        			<p>	<input type="checkbox" <eq name="pic['recommendation']" value="1" >checked</eq> onclick="recommendationPic({$pic['id']},this)" title="设置推荐图">
+		        				{$pic['title']|msubstr=0,4,'utf-8',false}&nbsp;
+		        				<a href="javascript:void(delPic({$pic['id']}));">删除</a></p>
+		        		</div>
+		        	</volist>
+		        </td></tr>
+		      	<tr>
+		        	<td>
+		        		<input type="button" onclick="addFileUpload();" value="添加图片" />
+        <br />			<span id="files">
+		        			<div id="fileDiv0">图片名称&nbsp;<input type="text" name="fileName[]">&nbsp;<input type="file" name="file[]"><a href="javascript:void(delFile('fileDiv0'));">删除</a></a><br></div>
+		        		</span>
+		        		</td>
+		      	</tr>
+		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">地图标注</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		        
+		        <td><div id="container" class="maps"></div>
+		        </td>
+		      </tr>
+
+		     
+		    </tbody></table>
+		    
+		    <div class="ydbar">
+		      <div class="info-title">周边配套信息</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table-f">
+		      <tbody> 
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">地铁：</td>
+		        <td align="left" colspan="2"><input type="text" id="subway" size="50" name="subway" value="{$vo.subway}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">公交：</td>
+		        <td align="left" colspan="2"><input type="text" id="bus" size="50" name="bus" value="{$vo.bus}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">临近交通枢纽：</td>
+		        <td align="left" colspan="2"><input type="text" id="transportHub" size="50" name="transportHub" value="{$vo.transportHub}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">学校：</td>
+		        <td align="left" colspan="2"><input type="text" id="school" size="50" name="school" value="{$vo.school}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">幼儿园：</td>
+		        <td align="left" colspan="2"><input type="text" id="kindergarten" size="50" name="kindergarten" value="{$vo.kindergarten}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">商场：</td>
+		        <td align="left" colspan="2"><input type="text" id="shopping" size="50" name="shopping" value="{$vo.shopping}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">医院：</td>
+		        <td align="left" colspan="2"><input type="text" id="hospital" size="50" name="hospital" value="{$vo.hospital}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">银行：</td>
+		        <td align="left" colspan="2"><input type="text" id="bank" size="50" name="bank" value="{$vo.bank}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">邮局：</td>
+		        <td align="left" colspan="2"><input type="text" id="post" size="50" name="post" value="{$vo.post}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		      <tr>
+		        <td align="right" width="12%" class="formtdl">餐饮：</td>
+		        <td align="left" colspan="2"><input type="text" id="dining" size="50" name="dining" value="{$vo.dining}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		       <tr>
+		        <td align="right" width="12%" class="formtdl">临近商业中心：</td>
+		        <td align="left" colspan="2"><input type="text" id="businessCenter" size="50" name="businessCenter" value="{$vo.businessCenter}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		       <tr>
+		        <td align="right" width="12%" class="formtdl">其它：</td>
+		        <td align="left" colspan="2"><input type="text" id="ortherFacility" size="50" name="ortherFacility" value="{$vo.ortherFacility}"></td>
+		        <td align="left" width="35%"></td>
+		      </tr>
+		     
+		    </tbody></table>
+    
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		          <td align="center">
+		            <input type="submit" value="确定" id="button" class="inp-yd" name="button">
+		            
+		        </td></tr>
+		    </tbody></table>
+		  </form>
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

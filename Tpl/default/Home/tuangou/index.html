@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$com.cityName}新房团购|{$com.cityName}最新团购优惠活动  - {$com.abbreviation}</title>
+<meta name="keywords" content="{$com.cityName}新房团购,团购优惠活动,购房优惠,一手楼团购,楼盘团购">
+<meta name="description" content="{$com.abbreviation}{$com.cityName}新房团购频道,为您提供最新{$com.cityName}楼盘团购优惠活动。团购买房,享受折扣，价格更低更实惠。团购热线：{$com.tel}.">
+<link href="__APP____PUBLIC__/css/head.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/index.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/css/tuan.css" rel="stylesheet" type="text/css" />
+<link href="__APP____PUBLIC__/images/favicon.ico" type="image/ico" rel="shortcut icon">
+<script type="text/javascript" src="__APP____PUBLIC__/js/jquery-1.4.4.js"></script><!-- 这个js当前没有使用到，但common.js有使用，会报错，所以引入 -->
+<script type="text/javascript" src="__APP____PUBLIC__/js/common.js"></script>
+</head>
+<body>
+	<div class="container">
+	
+	<include file="./Tpl/default/Home/head.html" /><!-- menu_bar end-->
+	<script>
+		currentMenu("tuangou");
+	</script>
+	
+	<include file="./Tpl/default/Home/marguee_news.html" />
+	
+	<div class="breadCrumb">
+		<a href="__APP__/" >{$com.abbreviation}</a> &gt; 
+		<a href="__APP__" >{$com.cityName}一手楼团购</a>
+	</div>
+	
+	<div id="index_content">
+		
+		<div id="contentL" class="fl">
+		
+			<foreach name='houseList' item="tuan">
+			<div class="main-item">
+				<h1><a href="__APP__/tuangou/view-{$tuan.id}.html" target="_blank"><span class="red">{$tuan.communityName}：</span>{$tuan.productName}</a></h1>
+				<div class="item_block">
+					
+					<div class="item_block_l">
+						<div class="block_lt">
+							<div class="block_a">
+								<ul>
+									<li><p class="tit">原价<span class="f-size12">/㎡</span></p><p class="tit_num">￥<del>{$tuan.originalPrice|number_format=0,',',''}</del></p></li>
+									<li class="vline"></li>
+									<li><p  class="tit">团购价<span class="f-size12">/㎡</span></p><p class="tit_num red"><strong>￥{$tuan.totalPrice|number_format=0,',',''}</strong></p></li>
+									<li  class="vline"></li>
+									<li><p  class="tit">折扣</p><p class="tit_num">{$tuan['totalPrice']/$tuan['originalPrice']*10|number_format=1,'.',','}</p></li>
+									
+								</ul>	
+							</div>
+							
+							<if condition="$tuan['end'] gt 1 ">
+								<ul class="apply">
+									<li class="l-text"><strong>{$tuan.recommendation}</strong></li>
+									<li><a href="__APP__/tuangou/view-{$tuan.id}.html" title="{$tuan.productName}" target="_blank"><img src="__APP____PUBLIC__/images/apply_min.gif" /></a></li>
+								</ul>
+							<else/>
+								<ul class="end">
+									<li class="l-text"><strong>{$tuan.recommendation}</strong></li>
+									<li><a href="__APP__/tuangou/view-{$tuan.id}.html" title="{$tuan.productName}" target="_blank"><img src="__APP____PUBLIC__/images/xqing.gif" /></a></li>
+								</ul>
+							</if>
+								
+							
+						</div>
+					
+						<div class="block_b">
+							<p class="text-c f-size16 fontbold mainColor">已有<span class="red f-size18">{$tuan.applyNum|number_format=0,',',''}</span>人报名</p>
+							<p class="text-c f-size15 fontbold mainColor time">团购日期:<span class="red f-size18">{$tuan.startDate}</span>至<span class="red f-size18">{$tuan.endDate}</span></p>
+							<p class="text-c f-size15 fontbold mainColor">报名截止时间：{$tuan.applyEndTime|date='Y-m-d',###}</p>
+							<div class="prop_tel_short"><span class="mt10 tel-text navColor">{$tuan.mobile}</span></div>
+						</div>
+							
+						
+						
+					</div>
+					<div class="item_block_r">
+						<if condition="$tuan.picture eq ''">
+							<img src="__APP____PUBLIC__/js/p7ssm/images/nopic.jpeg" alt="{$tuan.productName}" width="405"/>
+						<else /> <img src="__APP__{$tuan.picture}" alt="{$tuan.productName}" width="405"/></if>
+					</div>
+				</div>
+				
+
+			</div>
+		
+			</foreach>
+			
+			
+		</div>
+		
+		
+		<include file="./Tpl/default/Home/right.html" />
+		
+	</div><!-- index_content end -->
+	
+	<div class="clear"></div>
+	<include file="./Tpl/default/Home/footer.html" /><!-- menu_bar end-->
+	
+	</div>
+</body>
+</html>

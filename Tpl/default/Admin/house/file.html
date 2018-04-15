@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>后台管理</title>
+	<link href="/Public/css/admin/style.css" rel="stylesheet" type="text/css" />
+	<link href="/Public/css/validator.css" rel="stylesheet" type="text/css" />
+	<script src="/Public/js/jquery-1.4.4.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidator-4.1.1.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="/Public/admin/js/formValidatorRegex.js" type="text/javascript" charset="UTF-8"></script>
+	<script type="text/javascript" src="/Public/admin/js/common.js"></script>
+
+	
+	<script>
+
+		
+		
+		
+	</script>
+</head>
+
+<body>
+	
+		<include file="./Tpl/default/Admin/nav.html" />
+		
+		<div id="wrapper">
+			<div id="nav_trail"><a href="#">后台管理</a> 管理首页</div>
+			<div id="content">
+				
+				<!-- 左边菜单 -->
+				<include file="./Tpl/default/Admin/left_menu.html" />
+				<!-- 左边菜单 -->
+				
+				<script>
+					menusel('newhouse');
+				</script>
+				<div class="right_area">
+					<div class="cbar">
+			            
+			              <ul>
+			                <li><a href="qiye.jsp">新房查询</a></li>
+			    			<li class="cbar-tag-sel">增加新房源</a></li>
+			              </ul>
+			         </div><!-- cbar end -->
+			         
+			         <div class="cbox">
+          
+            <div class="ydbar">
+      			<div class="info-title">增加新房源</div>
+    		</div>	
+       		
+       		<form id="form1" name="form1" method="post" action="__URL__/file" enctype="multipart/form-data">
+		      
+		    
+		    <div class="ydbar">
+		      <div class="info-title">房源图片</div>
+		    </div>
+		    <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody>
+		      	<tr>
+		        	<td>
+		        		<input type="button" onclick="addFileUpload();" value="添加图片" />
+        <br />			<span id="files">
+		        			<div id="fileDiv0">图片名称&nbsp;<input type="text" name="fileName[]">&nbsp;<input type="file" name="file[]"><a href="javascript:void(delFile('fileDiv0'));">删除</a></a><br></div>
+		        		</span>
+		        		</td>
+		      	</tr>
+
+		     
+		    </tbody></table>
+		    
+		    
+		   <table width="100%" cellspacing="0" cellpadding="0" border="0">
+		      <tbody><tr>
+		          <td align="center">
+		            <input type="submit" value="提交" id="button" class="inp-yd" name="button">
+		            
+		        </td></tr>
+		    </tbody></table>
+		  </form>
+             
+          </div><!-- cbox end -->
+            
+			            
+			        </div><!-- right_area end -->
+				</div>
+				
+				<div class="clear"></div>
+			</div> <!-- content end-->
+			<div id="footer"></div>
+   		</div><!-- wrapper end-->
+</body>
+</html>

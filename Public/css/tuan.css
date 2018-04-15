@@ -1,0 +1,136 @@
+@CHARSET "UTF-8";
+
+body{margin:0 auto;}
+*{ margin:0px; padding:0px;}
+	
+.main-item{
+	width:99%;
+	border:1px solid #d1d1d1;
+	float:left;
+	padding: 10px 5px;
+	background-image: url("../images/tuan3.gif");
+	background-repeat:no-repeat;
+}
+.main-item h1{
+	width:664px;
+	margin-left:20px;
+	text-indent: 1em;
+	height:auto;
+	line-height: 120%;
+}
+
+.main-item h1, .main-item h1 a{
+	color: #1B72AF;
+	line-height:26px;
+	font-size: 22px;
+}
+.main-item h1 a:hover, .main-item h1 a:hover span {
+	color: red;
+	text-decoration:none;
+}
+.item block{
+	position: relative;
+}
+.item_block{margin-top:5px;}
+.item_block .apply,.item_block .end{
+	border:0px solid red;
+	width:340px;
+	height:63px;
+	float: left;
+	background: url("../images/tuan.gif") no-repeat transparent;
+	background-repeat:no-repeat; background-position:-8px -10px;
+	z-index:1;
+	position: absolute;
+	margin-top:2px;
+}
+.item_block .end{
+	background: url("../images/tuan.gif") no-repeat transparent;
+	background-repeat:no-repeat; background-position:-8px -73px;
+}
+.item_block ul li{
+	float: left;
+	margin-top:11px;
+	margin-left:30px;
+}
+.item_block ul .l-text{
+	margin-left:10px;
+	_margin-left:5px;
+	color: white;
+	font-size: 23px;
+	margin-top: 13px;
+}
+.item_block .ul_view .l-text{
+	margin-top: 15px;
+}
+.item_block_l{width:285px;}
+.item_block_l,.item_block_r{
+	float:left;
+}
+.item_block_l .block_lt{
+	height:130px;
+}
+.block_a{
+	height:45px;
+	width:270px;
+	margin-left:5px;
+	border:1px solid #d8e7f2;
+	background-color: #e9f6fb;
+}
+.block_a ul{padding: 2px 5px;}
+.block_a ul li{float: left;margin: 0px;width:86px;border:0px solid red;}
+.block_a ul .vline,.block_a_view ul .vline{overflow: hidden;border:0px solid red;width: 1px;height:40px; background: url("../images/tuan.gif") no-repeat scroll -308px -310px transparent;}
+
+.block_a ul li .tit,.block_a_view ul li .tit{color: #555;font-size: 14px;line-height: 20px;text-align: center;}
+.block_a ul li .tit_num,.block_a_view ul li .tit_num{font-size: 16px; line-height: 24px;text-align: center;}
+
+
+.item_block_r{
+	margin-left:2px;
+	border:0px solid red;
+}
+.item_block_r img{
+	max-width: 405px;height:auto;width:expression(this.width > 405 ? "405px" : this.width);
+}
+.time{_margin-left:-5px;}
+
+/**单个团购样式,除在宽度高度大小,其实地方尽量重用列表的样式**/
+.t-view{width:950px;border:1px solid #3d97d9;}
+.main-item .width930{width:930px;}
+.item_block_l_wiew{float:left;width:380px;}
+.item_block_r_view{width:565px;border:0px solid red;float:left;}
+.item_block_r_view img{
+	max-width: 565px;height:expression(this.height > 370 ? "370px" : this.height);width:expression(this.width > 565 ? "565px" : this.width);
+}
+.item_block .ul_view{
+	border:0px solid red;
+	width:430px;
+	height:63px;
+	float: left;
+	background: url("../images/tuan.gif") no-repeat transparent;
+	background-repeat:no-repeat; background-position:-6px -139px;
+	z-index:1;
+	position: absolute;
+	margin-top:2px;
+}
+.item_block .ul_view li{
+	float: left;
+	margin-top:3px;
+	margin: 11px 30px;
+	display:inline;
+}
+.block_a_view{
+	height:50px;
+	width:345px;
+	margin-left:15px;
+	border:1px solid #d8e7f2;
+	background-color: #e9f6fb;
+}
+.block_a_view ul li{margin:5px;width:96px;}
+	
+.item_block_l_wiew .block_lt{
+	height:130px;
+}
+#filter .tabbar-tuan{border-bottom: 3px solid #2c90da;height: 35px;overflow: hidden;width: 100%; background: url("../images/tuan.gif") no-repeat scroll -8px -268px transparent;}
+.selected-tuan .tuan-prop-intro{font-size: 20px;line-height: 20px;margin:11px 8px;}
+.selected-tuan .tuan-prop-intro a{color: #fff;}
+
