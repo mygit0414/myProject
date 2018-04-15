@@ -38,20 +38,21 @@ class AdminBaseAction extends Action{
 		$Product = M("Product");
 		
 		$this->id = $_GET['id'];
-		if(empty($this->id)){
+        //echo "GET=".$this->id ;
+        //echo "isset=".isset($this->id)."<br/>";
+		if(!isset($_GET['id'])){
 			$this->id = $_POST['id'];
 			//echo "post=".$this->id ;
 		}
 
-        //echo "id=".$this->id;
-		if(isset($this->id)){
+        if(!empty($this->id)){
+            //echo "id2=".$this->id;
 			$this->error("出错了，原因：主键ID为空");
 			return;
 		}
 
 
 		$vo	= $Product->select($this->id);
-
 
 		if(empty($vo) || empty($vo[0]) || $vo[0]["state"]==-1){
 //            dump($vo);
@@ -62,9 +63,6 @@ class AdminBaseAction extends Action{
 			$this->error("产品不存在，ID=".$this->id);
 			return;
 		}
-
-
-        //echo "id=".$vo[0]["userID"].",this.id=".$this->userID;
 
 		if($vo[0]["userID"]!=$this->userID && $this->userID!=1){
 			$this->error(Session::get('loginName').",权限不足.");

@@ -291,6 +291,7 @@ class HouseAction extends AdminBaseAction {
 	
 	
 	function update(){
+
 		import('ORG.Net.UploadFile');
 		if (empty($_POST['id'])){
 			$this->error("编辑失败，缺少主键ID");
@@ -392,11 +393,12 @@ class HouseAction extends AdminBaseAction {
 	
 	//删除房源
 	public function delete() {
-		
+
 		if(!empty($_GET['id'])) {
 			
 			$this->udAuth();
 
+			//return;
 			$House	=	M("Product");
 			$House->id=$_GET['id'];
 			$House->state=-1;

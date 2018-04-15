@@ -9,3 +9,9 @@
 		$this->assign("view_distName", $view_distName);
 2.百度地图不能默认显示
   正常设置后如果不行，清缓存重启浏览器应该就可以。
+
+
+2018-04-15 问题
+1.不能编辑房源，原因是使用isset作为id判断有问题，拿不到id，导致查询全表，正好数据state=-1，导致出错。
+2.代码在本地不能登录，即使密码正确也跳转到登录页面，日志提示：NOTIC: [2] session_start(): Cannot send session cookie - headers already sent by (output started at D:\php-workspace\jufengfc.com\index.php:1) App.class.php 绗� 64 琛�.
+解决：把index.php文件被插入的代码去掉，同时保存为UTF-8 无bom模式文件。
